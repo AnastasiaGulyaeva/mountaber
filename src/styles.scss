@@ -1,1 +1,141 @@
-/* You can add global styles to this file, and also import other style files */
+/* COLORS */
+$links: #6b6863;
+$linksActive: #a36846;
+$background: #f6f5f3;
+$title: #d0b38b;
+
+// FONT
+$font: FS Siena;
+
+body,
+html {
+  background-color: $background;
+  font-family: $font;
+  color: $links;
+  height: 100vh;
+  cursor: none;
+}
+
+p {
+  font-size: 9px;
+  line-height: 150%;
+  letter-spacing: 0.02rem;
+
+  &.text {
+    width: 11.25rem;
+  }
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: $title;
+  text-transform: lowercase;
+  line-height: 110%;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 2.875rem;
+  text-transform: lowercase;
+}
+
+.button {
+  border: 1px solid $links;
+  color: $links;
+  font-size: 14px;
+  line-height: 15px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  text-transform: lowercase;
+  padding: 8px 20px;
+  margin-top: 18px;
+
+  &:hover {
+    color: $linksActive;
+    border: 1px solid $linksActive;
+    cursor: none;
+  }
+}
+
+// raton
+// .cursor {
+//   width: 6px;
+//   height: 6px;
+//   background-color: $links;
+//   border-radius: 50%;
+//   position: absolute;
+//   z-index: 1000;
+// }
+
+// .cursor-follow {
+//   width: 12px;
+//   height: 12px;
+//   background: $title;
+//   border-radius: 50%;
+//   position: absolute;
+//   transition-duration: 300ms;
+//   transition-timing-function: ease-out;
+//   pointer-events: none;
+//   animation: cursorAnim 0.8s infinite alternate;
+//   z-index: 999;
+// }
+
+// .cursor.stop {
+//   width: 8px;
+//   height: 8px;
+//   background: $title;
+//   border-radius: 50%;
+//   top: -4px;
+//   left: 0px;
+//   position: absolute;
+//   transition-duration: 300ms;
+//   transition-timing-function: ease-out;
+//   pointer-events: none;
+//   animation: cursorStop 3s;
+// }
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+// @keyframes cursorStop {
+//   0% {
+//     transform: scale(1);
+//   }
+//   100% {
+//     text-replace: scale (0.4);
+//   }
+// }
+
+.cursor {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.cursor.cursor-follower {
+  background: $title;
+  transition: top 0.25s, left 0.25s, width 0.5s, height 0.5s;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.8s infinite alternate;
+  z-index: 999;
+}
+
+.cursor.cursor-dot {
+  height: 6px;
+  width: 6px;
+  background: $links;
+  transition: width 0.25s, height 0.25s;
+}

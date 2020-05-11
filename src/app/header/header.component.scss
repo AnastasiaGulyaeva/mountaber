@@ -1,0 +1,61 @@
+@import "../../styles.scss";
+
+#logo {
+  margin-top: 25px;
+  display: block;
+}
+
+.nav-link {
+  font-family: FS Siena;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  margin-top: 60px;
+  color: $links;
+}
+
+// horisontal line
+.line {
+  border-bottom: 1px solid $links;
+  height: 105px;
+}
+
+// vertical line
+.menu-line {
+  position: relative;
+}
+
+.menu-line:hover {
+  color: $linksActive;
+}
+
+.menu-line:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: -90%;
+  background: $linksActive;
+  width: 1px;
+  height: 15px;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-line:hover::after {
+  -webkit-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+  opacity: 1;
+  color: #1d2930;
+}
+
+.menu-active {
+  color: $linksActive;
+}

@@ -1,0 +1,25 @@
+@import "../../styles.scss";
+
+.site-section {
+  padding: 18vh 0;
+  height: 74vh;
+}
+
+img {
+  mix-blend-mode: darken;
+  height: 100vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 55%;
+}
+
+.button-line:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  background: $links;
+  width: 1px;
+  height: 60px;
+}

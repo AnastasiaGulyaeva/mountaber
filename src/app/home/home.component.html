@@ -1,0 +1,61 @@
+<section class="site-section">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-4">
+        <div class="">
+          <h1>
+            perpetual <br />
+            fine jewelry
+          </h1>
+          <p *ngIf="toggle; else part2" class="text">
+            Traditionally, high jewelry has been associated with author jewelry
+            (auteur jewelry), in which behind every gem there is a well-known
+            artisan whose sole gnature is enough to relate the jewel to the
+            ideas of quality and luxury.
+          </p>
+
+          <ng-template #part2>
+            <p class="text">
+              For Mountaber, high jewelry is something else. It is the sum of
+              talent, research and effort of artisans throughout centuries of
+              work. All of this confers a unique nature and jewelry culture to
+              each corner of the world.
+            </p>
+          </ng-template>
+
+          <button
+            *ngIf="toggle; else less"
+            (click)="toggle = !toggle"
+            class="button"
+            type="button"
+          >
+            more
+          </button>
+
+          <ng-template #less>
+            <button (click)="toggle = !toggle" class="button" type="button">
+              less
+            </button>
+          </ng-template>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <img
+          [ngsReveal]="{ reset: true }"
+          *ngIf="toggle; else foto2"
+          src="./assets/foto/_MG_8797-34.jpg"
+          alt="Image"
+          class="img-fluid foto"
+        />
+        <ng-template #foto2>
+          <img
+            [ngsReveal]="{ reset: true }"
+            src="./assets/foto/_MG_8442-12-B-n2.jpg"
+            alt="Image"
+            class="img-fluid foto"
+          />
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>

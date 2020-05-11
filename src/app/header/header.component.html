@@ -1,0 +1,57 @@
+<header class="" role="banner">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-5 line">
+        <nav class="nav justify-content-around" role="navigation">
+          <div>
+            <a
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLinkActive="menu-active"
+              routerLink="/"
+              class="nav-link menu-line"
+              >who are we</a
+            >
+          </div>
+          <div>
+            <a
+              routerLinkActive="menu-active"
+              routerLink="/stamp"
+              class="nav-link menu-line"
+              >the stamp</a
+            >
+          </div>
+        </nav>
+      </div>
+      <div class="col-lg-2">
+        <img
+          href="/"
+          id="logo"
+          class="mx-auto"
+          src="./assets/logoWeb.svg"
+          alt="Mountaber"
+          height="80"
+        />
+      </div>
+      <div class="col-lg-5 line">
+        <nav class="nav justify-content-around" role="navigation">
+          <div>
+            <a
+              routerLinkActive="menu-active"
+              routerLink="/jewels"
+              class="nav-link menu-line"
+              >the jewels</a
+            >
+          </div>
+          <div>
+            <a
+              routerLinkActive="menu-active"
+              routerLink="/contact"
+              class="nav-link menu-line"
+              >contact us</a
+            >
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
