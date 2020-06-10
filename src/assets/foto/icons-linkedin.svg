@@ -1,0 +1,19 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+  <defs>
+    <style type="text/css">
+          svg {
+          fill: #6B6863;
+          -webkit-transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+          -moz-transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+          transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+          }
+          svg:hover {
+          fill: #A36846;
+          }
+      </style>
+  </defs>
+  <title>icons</title>
+  <path class="cls-1" d="M11.9976,12H12V7.59844c0-2.1539-.4641-3.81093-2.98128-3.81093A2.61,2.61,0,0,0,6.6656,5.08126H6.63044V3.98907H4.24451V12H6.72888V8.032c0-1.04531.19687-2.05547,1.49062-2.05547,1.275,0,1.29375,1.193,1.29375,2.12109V12Z"/>
+  <path class="cls-1" d="M.1969,3.98906H2.686V12H.1969Z"/>
+  <path class="cls-1" d="M1.44141,0a1.44846,1.44846,0,1,0,1.4414,1.44141A1.44037,1.44037,0,0,0,1.44141,0Z"/>
+</svg>

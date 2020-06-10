@@ -1,0 +1,38 @@
+@import "../styles.scss";
+
+// cursor ------------------------------------------------------------
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.cursor {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+  z-index: 9000;
+}
+
+.cursor.cursor-follower {
+  background: $title;
+  transition: top 0.25s, left 0.25s, width 0.5s, height 0.5s;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.8s infinite alternate;
+  z-index: 8999;
+}
+
+.cursor.cursor-dot {
+  height: 6px;
+  width: 6px;
+  background: $text;
+  transition: width 0.25s, height 0.25s;
+}

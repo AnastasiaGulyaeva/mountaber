@@ -1,141 +1,287 @@
 /* COLORS */
-$links: #6b6863;
-$linksActive: #a36846;
+$text: #6b6863;
+$linkHover: #a36846;
 $background: #f6f5f3;
 $title: #d0b38b;
+$blue: #485368;
+$green: #3b5847;
+$carmine: #8e5755;
 
 // FONT
-$font: FS Siena;
+$font: "FS Siena Regular", Georgia, "Times New Roman", Times, serif !important;
 
-body,
+//  text sizes
+$textSizeXXL: 0.96rem;
+$textSizeXL: 0.98rem;
+$textSizeLG: 0.82rem;
+$textSizeMD: 0.98rem;
+$textSizeSM: 0.64rem;
+$textSizeXS: 0.56rem;
+
+// title sizes h1
+$titleSizeXXL: 5.4rem;
+$titleSizeXL: 6.4rem;
+$titleSizeLG: 5.6rem;
+$titleSizeMD: 5rem;
+$titleSizeSM: 3.4rem;
+$titleSizeXS: 2.4rem;
+
+// title sizes h2
+$h2SizeXXL: 2.4rem;
+$h2SizeXL: 6.4rem;
+$h2SizeLG: 5.6rem;
+$h2SizeMD: 5rem;
+$h2SizeSM: 3.4rem;
+$h2SizeXS: 2.4rem;
+
+// footer text sizes
+$footerSizeXXL: 0.88rem;
+$footerSizeXL: 0.88rem;
+$footerSizeLG: 0.88rem;
+$footerSizeMD: 0.88rem;
+$footerSizeSM: 0.67rem;
+$footerSizeXS: 0.88rem;
+
+// margin sizes
+$mBottomL-XL: 66px;
+$mBottomL-MD: 62px;
+$mBottomL-XS: 60px;
+
+$mBottomM-XL: 36px;
+$mBottomM-MD: 32px;
+$mBottomM-XS: 30px;
+
+//  distancias del texto y bottones
+$mBottomS-XL: 24px;
+$mBottomS-MD: 18px;
+$mBottomS-XS: 16px;
+
+@mixin commonText($line-height: 146%) {
+  color: $text;
+  font-family: $font;
+  letter-spacing: 0.02rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: $line-height;
+}
+
+@mixin commonTitle($line-height: 96%) {
+  color: $title;
+  font-family: $font;
+  letter-spacing: 0.02rem;
+  text-transform: lowercase;
+  line-height: $line-height;
+}
+
 html {
+  font-size: 100%;
+}
+
+body {
   background-color: $background;
   font-family: $font;
-  color: $links;
+  color: $text;
   height: 100vh;
   cursor: none;
 }
 
-p {
-  font-size: 9px;
-  line-height: 150%;
-  letter-spacing: 0.02rem;
+.site-section {
+  height: 80vh;
+}
 
-  &.text {
-    width: 11.25rem;
-  }
+.interior-height {
+  height: 80vh;
+}
+
+p {
+  @include commonText;
+  font-size: $textSizeLG;
+}
+
+a {
+  @include commonText(13px);
+  font-size: $textSizeLG;
+}
+
+.padding-text {
+  padding-right: 80px;
 }
 
 h1 {
-  font-size: 3.5rem;
-  color: $title;
-  text-transform: lowercase;
-  line-height: 110%;
-  margin-bottom: 18px;
+  @include commonTitle(96%);
+  font-size: $titleSizeLG;
+  margin-bottom: $mBottomS-XL;
 }
 
 h2 {
-  font-size: 2.875rem;
+  font-size: 2.8rem;
   text-transform: lowercase;
 }
 
 .button {
-  border: 1px solid $links;
-  color: $links;
-  font-size: 14px;
-  line-height: 15px;
+  @include commonText(15px);
+  border: 1px solid $text;
   display: block;
-  align-items: center;
-  text-align: center;
-  align-self: center;
-  text-transform: lowercase;
   padding: 8px 20px;
-  margin-top: 18px;
+  margin-top: $mBottomS-XL;
+  width: 100px;
+  background: rgba($background, 0.5);
 
   &:hover {
-    color: $linksActive;
-    border: 1px solid $linksActive;
+    color: $linkHover;
+    border: 1px solid $linkHover;
     cursor: none;
+    transition: color cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
   }
 }
 
-// raton
-// .cursor {
-//   width: 6px;
-//   height: 6px;
-//   background-color: $links;
-//   border-radius: 50%;
-//   position: absolute;
-//   z-index: 1000;
-// }
+button:focus {
+  outline: none;
+  outline: none;
+}
 
-// .cursor-follow {
-//   width: 12px;
-//   height: 12px;
-//   background: $title;
-//   border-radius: 50%;
-//   position: absolute;
-//   transition-duration: 300ms;
-//   transition-timing-function: ease-out;
-//   pointer-events: none;
-//   animation: cursorAnim 0.8s infinite alternate;
-//   z-index: 999;
-// }
+figure {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 
-// .cursor.stop {
-//   width: 8px;
-//   height: 8px;
-//   background: $title;
-//   border-radius: 50%;
-//   top: -4px;
-//   left: 0px;
-//   position: absolute;
-//   transition-duration: 300ms;
-//   transition-timing-function: ease-out;
-//   pointer-events: none;
-//   animation: cursorStop 3s;
-// }
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
 
-@keyframes cursorAnim {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.5);
+h1 {
+  display: block;
+  & span {
+    display: inline-block;
   }
 }
 
-// @keyframes cursorStop {
-//   0% {
-//     transform: scale(1);
-//   }
-//   100% {
-//     text-replace: scale (0.4);
-//   }
-// }
+// MEDIA QUERIES -------------------------------------------------------- max-width: 576
+@media (max-width: 576px) {
+  h1 {
+    @include commonTitle(98%);
+    font-size: $titleSizeSM;
+    margin-bottom: $mBottomS-XL;
+  }
 
-.cursor {
-  height: 9px;
-  width: 9px;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  user-select: none;
-  pointer-events: none;
-  z-index: 1000;
+  h2 {
+    @include commonTitle(96%);
+    font-size: 3.2rem;
+    color: $text;
+  }
+
+  p {
+    font-size: $textSizeMD;
+  }
+  .button {
+    font-size: $textSizeMD;
+  }
+  .padding-text {
+    padding-right: 60px;
+  }
+  .site-section {
+    height: 79vh;
+  }
+
+  .interior-height {
+    height: 79vh;
+  }
 }
 
-.cursor.cursor-follower {
-  background: $title;
-  transition: top 0.25s, left 0.25s, width 0.5s, height 0.5s;
-  transition-timing-function: ease-out;
-  animation: cursorAnim 0.8s infinite alternate;
-  z-index: 999;
+// MEDIA QUERIES -------------------------------------------------------- min-width: 1200
+@media (min-width: 1200px) {
+  .container {
+    width: 82%;
+    max-width: 82%;
+  }
+
+  p {
+    @include commonText;
+    font-size: $textSizeXXL;
+  }
+
+  a {
+    @include commonText(13px);
+    font-size: $textSizeXXL;
+  }
+
+  h1 {
+    @include commonTitle(98%);
+    font-size: $titleSizeXXL;
+    margin-bottom: $mBottomS-XL;
+  }
+
+  h2 {
+    @include commonTitle(96%);
+    font-size: $h2SizeXXL;
+    color: $text;
+  }
+
+  .button {
+    margin-top: $mBottomS-XL;
+  }
+
+  .padding-text {
+    padding-right: 120px;
+  }
 }
 
-.cursor.cursor-dot {
-  height: 6px;
-  width: 6px;
-  background: $links;
-  transition: width 0.25s, height 0.25s;
+// MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h1 {
+    font-size: $titleSizeMD;
+  }
+  p {
+    font-size: $textSizeMD;
+  }
+}
+
+// @media (min-width: 1400px) { }
+// @media (min-width: 1600px) { }
+// @media (min-width: 1750px) { }
+// @media (min-width: 1850px) { }
+// @media (min-width: 2000px) { }
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1349.98px) {
+}
+
+/* // Extra large devices (Xlarge desktops, 1350px and up) */
+@media (min-width: 1350px) and (max-width: 1499.98px) {
+}
+
+/* // Extra large devices (XXlarge desktops, 1500px and up) */
+@media (min-width: 1500px) and (max-width: 1649.98px) {
+}
+
+/* // Extra large devices (XXXlarge desktops, 1700px and up) */
+@media (min-width: 1700px) {
 }

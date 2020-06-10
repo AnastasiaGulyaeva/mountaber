@@ -1,25 +1,122 @@
 @import "../../styles.scss";
 
-.site-section {
-  padding: 18vh 0;
-  height: 74vh;
+figure {
+  margin-top: -9.5vh;
+  margin-left: -3.5vw;
+  width: 74%;
 }
 
-img {
-  mix-blend-mode: darken;
-  height: 100vh;
-  width: auto;
-  position: absolute;
-  top: 0;
-  left: 55%;
+.button-jewels {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  bottom: 10vh;
 }
 
-.button-line:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  background: $links;
-  width: 1px;
-  height: 60px;
+.button-line {
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 101%;
+    background: $text;
+    width: 1px;
+    height: 10vh;
+  }
+  &:hover:after {
+    background: $linkHover;
+  }
+  &:before {
+    content: "";
+    width: 8px;
+    position: absolute;
+    height: 8px;
+    border-radius: 50%;
+    background: $text;
+    left: 56px;
+    top: 30px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+  }
+  &:hover:before {
+    background: $linkHover;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: scale(0.2);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.2);
+    top: 130px;
+  }
+}
+
+h1 {
+  position: relative;
+  & span:nth-child(1),
+  & span:nth-child(2),
+  & span:nth-child(3) {
+    margin-right: 1.4rem;
+  }
+}
+
+// ------------------------------------- min-width 2000px ------------------------------------------
+@media (min-width: 2000px) {
+}
+
+// ------------------------------------- max-width 1200px ------------------------------------------
+@media (max-width: 1200px) {
+  div p:nth-child(1) {
+    margin-bottom: $mBottomS-MD;
+  }
+
+  figure {
+    position: absolute;
+    top: 9.5vh;
+    right: 14%;
+    width: 76%;
+
+    & img {
+      mix-blend-mode: darken;
+    }
+  }
+
+  .button-line:after {
+    content: "";
+    width: 0;
+    height: 0;
+  }
+
+  .button-line:before {
+    content: "";
+    width: 0;
+    height: 0;
+  }
+
+  .pendantX {
+    position: absolute;
+    top: 9.5vh;
+    right: 8%;
+    width: 88%;
+  }
+}
+
+// -------------------------------------max width 991  MD---------------------------------------
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  figure {
+    margin-top: -9.5vh;
+    margin-right: 8.6vw;
+    width: 57%;
+  }
 }

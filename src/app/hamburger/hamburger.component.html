@@ -1,0 +1,44 @@
+<!-- ------------------------------------------------------ -->
+<div class="d-block d-lg-none">
+  <nav class="myResponsiveMenu">
+    <!-- <div class="burgerZ"> -->
+    <input
+      (click)="openMenu()"
+      #input
+      type="checkbox"
+      class="toggler myInputBurger"
+    />
+    <div class="hamburger"><div></div></div>
+    <!-- </div> -->
+    <div class="menu">
+      <div class="myUlMenuBox">
+        <ul class="myResponsiveUl">
+          <li [@menuAnimation1]="menuState">
+            <a (click)="close()" routerLink="/">who are we</a>
+          </li>
+          <li [@menuAnimation2]="menuState">
+            <a (click)="close()" routerLink="/the-stamp">the stamp</a>
+          </li>
+          <li [@menuAnimation3]="menuState">
+            <a (click)="close()" routerLink="/the-jewels">the jewels</a>
+          </li>
+          <li [@menuAnimation4]="menuState">
+            <a (click)="close()" routerLink="/contact-us">contact us</a>
+          </li>
+          <hr [@menuAnimationLine]="menuState" />
+          <li [@menuAnimationIcons]="menuState">
+            <a>
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a>
+              <i class="fa fa-facebook-f"></i>
+            </a>
+            <a>
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

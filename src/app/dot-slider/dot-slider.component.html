@@ -1,0 +1,18 @@
+<div id="dotSlider">
+  <ul>
+    <li
+      routerLink="/"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="menu-active"
+    ></li>
+    <li routerLink="/the-stamp" routerLinkActive="menu-active"></li>
+
+    <li
+      #liCollections
+      routerLink="/the-jewels"
+      routerLinkActive="menu-active"
+    ></li>
+
+    <li routerLink="/contact-us" routerLinkActive="menu-active"></li>
+  </ul>
+</div>

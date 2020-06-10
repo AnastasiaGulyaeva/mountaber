@@ -1,0 +1,29 @@
+#icons {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translate(0, -50%);
+  & li {
+    margin: 14px auto;
+    list-style: none;
+    position: relative;
+    display: block;
+  }
+  & li object {
+    width: 12px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  #icons li object {
+    width: 16px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  #icons {
+    display: none;
+  }
+}

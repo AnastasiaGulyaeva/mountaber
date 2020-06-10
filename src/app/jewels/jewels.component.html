@@ -1,31 +1,64 @@
 <section class="site-section">
-  <img src="./assets/foto/_DSC1912.jpg" alt="Image" class="img-fluid foto" />
   <div class="container-fluid">
-    <div class="row align-items-center">
-      <div class="col-4 offset-md-2 mt-5">
-        <h1>
-          the jewels per se
-        </h1>
-        <div class="row">
-          <div class="col-6">
-            <p>
-              Our pieces are the perfect incarnation of our jewelry tradition:
-              the strength of noble metals contrasts with the harmony and the
-              softness of plant shapes, and the elegance of the finest ems
-              matches the simplicity of geometric forms.
-            </p>
-          </div>
-          <div class="col-6">
-            <p>
-              Timeless jewelry sets based on modernism, which are easy to wear
-              and do not enhance the author but the personality of those who
-              wear them.
-            </p>
+    <div class="container">
+      <!----------------------- photo SM ------------------------------->
+      <figure #pendant class="img-jewels d-block d-lg-none">
+        <img
+          @animationJewels
+          src="./assets/foto/mountaber-rosemary-jewels-mobile.jpg"
+          alt="Image"
+          class="img-fluid foto"
+          width="100%"
+          height="auto"
+        />
+      </figure>
+
+      <div class="row align-items-center interior-height">
+        <div class="col-md-12 col-lg-6 offset-lg-1">
+          <h1 @titleAnimation>
+            <span>the</span>
+            <span>jewels</span>
+            <span>per</span>
+            <span>se</span>
+          </h1>
+          <div class="row">
+            <div class="col-lg-6">
+              <p @textAnimationL>
+                Our pieces are the perfect incarnation of our jewelry tradition:
+                the strength of noble metals contrasts with the harmony and the
+                softness of plant shapes, and the elegance of the finest ems
+                matches the simplicity of geometric forms.
+              </p>
+            </div>
+            <div class="col-md-12 col-lg-6">
+              <p @textAnimationR>
+                Timeless jewelry sets based on modernism, which are easy to wear
+                and do not enhance the author but the personality of those who
+                wear them.
+              </p>
+            </div>
           </div>
         </div>
+        <div class="col-md-12 col-lg-5 d-none d-lg-block interior-height">
+          <figure class="img-jewels">
+            <img
+              @animationJewels
+              src="./assets/foto/mountaber-jewels-rosemary-pendant.png"
+              alt="Image"
+              class="img-fluid foto"
+              width="100%"
+              height="auto"
+            />
+          </figure>
+        </div>
       </div>
-      <div class="col-12">
-        <button class="button mx-auto button-line">Collection</button>
+      <div @buttonAnimation class="button-box">
+        <button
+          (click)="goToCollections()"
+          class="button button-jewels button-line"
+        >
+          Collections
+        </button>
       </div>
     </div>
   </div>

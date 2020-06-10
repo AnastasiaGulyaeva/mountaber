@@ -1,0 +1,196 @@
+@import "../../styles.scss";
+
+h1 {
+  margin-bottom: 0;
+  height: 48vh;
+  display: flex;
+  align-items: flex-end;
+}
+// input {
+//   background: none;
+//   border: none;
+//   border-bottom: 1px solid $text;
+//   width: 100%;
+//   margin-top: 40px;
+//   color: $text;
+//   padding: 0 0 0 12px;
+//   font-size: 12px;
+//   &.ng-valid {
+//     border-bottom: 1px solid $green;
+//     color: $green;
+//   }
+// }
+
+input:focus {
+  outline: none;
+}
+
+.pContact {
+  line-height: 100%;
+}
+
+//  animation input ------------------------------------------------------------------------
+
+/* Component Start */
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  max-width: 100%;
+  width: calc(100% - 2em);
+  vertical-align: bottom;
+}
+
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+}
+
+.input__field:focus {
+  outline: none;
+}
+
+.input__label {
+  display: inline-block;
+  padding: 0 1em;
+  width: 40%;
+  font-size: 70%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.1rem 0;
+  width: 100%;
+}
+
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+
+/* Madoka */
+
+.input__field--madoka {
+  width: 100%;
+  background: transparent;
+  color: $text;
+}
+
+.input__label--madoka {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: $text;
+  font-size: $textSizeXL;
+  text-align: left;
+  cursor: none;
+}
+
+.input__label-content--madoka {
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.graphic--madoka {
+  -webkit-transform: scale3d(1, -1, 1);
+  transform: scale3d(1, -1, 1);
+  -webkit-transition: stroke-dashoffset 0.3s;
+  transition: stroke-dashoffset 0.3s;
+  pointer-events: none;
+  stroke: $text;
+  stroke-width: 3;
+  stroke-dasharray: 962;
+  stroke-dashoffset: 558;
+}
+
+.input__field--madoka:focus + .input__label--madoka,
+.input--filled .input__label--madoka {
+  cursor: default;
+  pointer-events: none;
+}
+
+.input__field--madoka:focus + .input__label--madoka .graphic--madoka,
+.input--filled .graphic--madoka {
+  stroke-dashoffset: 0;
+}
+
+.input__field--madoka:focus
+  + .input__label--madoka
+  .input__label-content--madoka,
+.input--filled .input__label-content--madoka {
+  -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 3em, 0);
+  transform: scale3d(0.81, 0.81, 1) translate3d(0, 3em, 0);
+}
+
+@media (min-width: 1200px) {
+  .pContact {
+    line-height: 124%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .pContact {
+    line-height: 138%;
+  }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 1.6rem;
+    height: 16vh;
+    line-height: 114%;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .input__field {
+    padding: 0.5em;
+  }
+
+  .input__label-content {
+    padding: 0.7rem 0;
+  }
+
+  .input__field--madoka:focus
+    + .input__label--madoka
+    .input__label-content--madoka,
+  .input--filled .input__label-content--madoka {
+    -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 2.5em, 0);
+    transform: scale3d(0.81, 0.81, 1) translate3d(0, 2.5em, 0);
+  }
+
+  .button {
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+}
+
+// MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .input__label--madoka {
+    width: 70%;
+    height: 100%;
+  }
+
+  .input__field--madoka {
+    width: 100%;
+  }
+}

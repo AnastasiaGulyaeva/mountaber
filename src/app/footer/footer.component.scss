@@ -1,8 +1,52 @@
-.footer {
-  display: flex;
-  // align-content: center;
-  // justify-content: center;
-  .footer-text {
-    margin-bottom: 43px;
+@import "../../styles.scss";
+
+footer {
+  height: 10vh;
+}
+
+.footer-left,
+.footer-right {
+  height: 10vh;
+  margin-bottom: 26px;
+}
+
+// --------------------------------------min width 1200 ------------------------------------------
+@media (min-width: 1200px) {
+  footer {
+    height: 9vh;
+    background: none;
+  }
+
+  .footer-left p,
+  .footer-right p {
+    line-height: 10vh;
+    font-size: $footerSizeXXL;
+  }
+}
+
+// --------------------------------------max width 1200 ------------------------------------------
+@media (max-width: 1200px) {
+  footer {
+    height: 5vh;
+    background: darken($title, 14%);
+  }
+
+  .footer-left {
+    height: 5vh;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .footer-left p {
+    font-size: $footerSizeSM;
+    line-height: 5vh;
+    color: $background;
+  }
+}
+
+// MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-left p {
+    font-size: $footerSizeMD;
   }
 }

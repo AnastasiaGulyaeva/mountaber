@@ -1,11 +1,54 @@
-.site-section {
-  padding: 14vh 0;
-  height: 74vh;
+@import "../../styles.scss";
+.text-z-index {
+  position: relative;
+  z-index: 1000;
 }
 
-img {
-  margin-left: -15px;
-  height: auto;
-  width: 28vw;
-  z-index: -30;
+figure {
+  position: relative;
+  width: 125%;
+  z-index: -1000;
+  margin-left: -25%;
+}
+
+h1 {
+  & span:nth-child(3) {
+    margin-right: 1.4rem;
+  }
+}
+
+.imgLG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.imgTransparent {
+  opacity: 0;
+}
+
+// -----------------------------------------max-width 1200 ----------------------------------
+@media (max-width: 1200px) {
+  h1 {
+    & span:nth-child(2),
+    & span:nth-child(1) {
+      margin-right: 1.2rem;
+    }
+  }
+
+  figure {
+    width: 100%;
+    margin-bottom: -44px;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    color: $text;
+  }
 }

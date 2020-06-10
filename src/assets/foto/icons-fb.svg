@@ -1,0 +1,22 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12 11.9155">
+  <defs>
+    <style type="text/css">
+          svg {
+          fill: #6B6863;
+          -webkit-transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+          -moz-transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+          transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+          }
+          svg:hover {
+          fill: #A36846;
+          }
+      </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" y="-0.0845" width="12" height="12"/>
+    </clipPath>
+  </defs>
+  <title>icons</title>
+  <g class="cls-2">
+    <path class="cls-3" d="M7.9985,1.908H9.094V0A14.14606,14.14606,0,0,0,7.498-.0845,2.53357,2.53357,0,0,0,4.83651,2.735V4.4155h-1.743v2.133h1.743v5.367h2.137V6.549H8.646l.2655-2.133H6.973V2.9465C6.97351,2.33,7.1395,1.908,7.9985,1.908Z"/>
+  </g>
+</svg>

@@ -1,55 +1,65 @@
-<header class="" role="banner">
+<app-hamburger></app-hamburger>
+
+<header class="container-fluid" #header role="banner">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-5 line">
-        <nav class="nav justify-content-around" role="navigation">
-          <div>
-            <a
-              [routerLinkActiveOptions]="{ exact: true }"
-              routerLinkActive="menu-active"
-              routerLink="/"
-              class="nav-link menu-line"
-              >who are we</a
-            >
-          </div>
-          <div>
-            <a
-              routerLinkActive="menu-active"
-              routerLink="/stamp"
-              class="nav-link menu-line"
-              >the stamp</a
-            >
-          </div>
+    <!---------------- menu pantalla ------------------->
+    <div class="row justify-content-center myHeader no-gutters">
+      <!-- nav1 ------------------------------------------------------------------->
+      <div class="col-5 line noPadding d-none d-lg-block">
+        <nav
+          class="nav justify-content-around d-flex align-content-end flex-wrap"
+          role="navigation"
+        >
+          <a
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="menu-active"
+            routerLink="/"
+            class="nav-link menu-line align-self-end"
+            >who are we</a
+          >
+
+          <a
+            routerLinkActive="menu-active"
+            routerLink="/the-stamp"
+            class="nav-link menu-line"
+            >the stamp</a
+          >
         </nav>
       </div>
-      <div class="col-lg-2">
-        <img
-          href="/"
-          id="logo"
-          class="mx-auto"
-          src="./assets/logoWeb.svg"
-          alt="Mountaber"
-          height="80"
-        />
+
+      <!--------------------------------- logo ---------------------------------------------->
+      <div class="col-md-6 col-lg-2 d-flex align-content-end flex-wrap">
+        <figure class="box-logo mx-auto">
+          <img
+            routerLink="/"
+            id="logo"
+            class="logo"
+            src="./assets/logoWeb.svg"
+            alt="Mountaber"
+            width="100%"
+            height="auto"
+          />
+        </figure>
       </div>
-      <div class="col-lg-5 line">
-        <nav class="nav justify-content-around" role="navigation">
-          <div>
-            <a
-              routerLinkActive="menu-active"
-              routerLink="/jewels"
-              class="nav-link menu-line"
-              >the jewels</a
-            >
-          </div>
-          <div>
-            <a
-              routerLinkActive="menu-active"
-              routerLink="/contact"
-              class="nav-link menu-line"
-              >contact us</a
-            >
-          </div>
+      <!-- nav2 -------------------------------------------------------------------->
+      <div class="col-5 line d-none d-lg-block">
+        <nav
+          class="nav justify-content-around d-flex align-content-end flex-wrap"
+          role="navigation"
+        >
+          <a
+            routerLinkActive="menu-active"
+            routerLink="/the-jewels"
+            class="nav-link menu-line"
+            >the jewels</a
+          >
+
+          <a
+            routerLinkActive="menu-active"
+            routerLink="/contact-us"
+            class="nav-link menu-line"
+            >contact us</a
+          >
         </nav>
       </div>
     </div>
