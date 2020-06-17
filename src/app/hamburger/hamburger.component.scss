@@ -37,7 +37,6 @@
 
   .hamburger {
     position: absolute;
-    height: 30px;
     width: 40px;
     z-index: 3;
     height: 16vh;
@@ -255,5 +254,100 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   .hamburger > div {
     top: 0;
     left: 13px;
+  }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .toggler {
+    top: 106px;
+    left: 28px;
+  }
+
+  .hamburger > div {
+    top: -4px;
+    left: 13px;
+  }
+}
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .toggler {
+    top: 49px;
+    left: 48px;
+  }
+
+  .hamburger > div {
+    top: 40px;
+    left: 33px;
+  }
+
+  .menu > div > ul > li {
+    padding: 0.5rem;
+  }
+
+  .menu > div > ul > li > a {
+    font-size: 1.4rem;
+  }
+
+  .myResponsiveUl {
+    padding-top: 3vh;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .toggler {
+    top: 48px;
+    left: 67px;
+  }
+
+  .hamburger > div {
+    top: 40px;
+    left: 54px;
+  }
+
+  .menu > div > ul > li {
+    padding: 0.5rem;
+  }
+
+  .menu > div > ul > li > a {
+    font-size: 1.4rem;
+  }
+
+  .myResponsiveUl {
+    padding-top: 3vh;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .toggler {
+    top: 46px;
+    left: 102px;
+  }
+
+  .hamburger > div {
+    top: 34px;
+    left: 90px;
+  }
+
+  .menu > div > ul > li {
+    padding: 0.5rem;
+  }
+
+  .menu > div > ul > li > a {
+    font-size: 1.4rem;
+  }
+
+  .myResponsiveUl {
+    padding-top: 3vh;
   }
 }

@@ -11,6 +11,7 @@
           role="navigation"
         >
           <a
+            #menu
             [routerLinkActiveOptions]="{ exact: true }"
             routerLinkActive="menu-active"
             routerLink="/"
@@ -19,6 +20,7 @@
           >
 
           <a
+            #menu
             routerLinkActive="menu-active"
             routerLink="/the-stamp"
             class="nav-link menu-line"
@@ -29,7 +31,7 @@
 
       <!--------------------------------- logo ---------------------------------------------->
       <div class="col-md-6 col-lg-2 d-flex align-content-end flex-wrap">
-        <figure class="box-logo mx-auto">
+        <figure #logo class="box-logo mx-auto">
           <img
             routerLink="/"
             id="logo"
@@ -48,6 +50,7 @@
           role="navigation"
         >
           <a
+            #menu
             routerLinkActive="menu-active"
             routerLink="/the-jewels"
             class="nav-link menu-line"
@@ -55,6 +58,7 @@
           >
 
           <a
+            #menu
             routerLinkActive="menu-active"
             routerLink="/contact-us"
             class="nav-link menu-line"

@@ -102,7 +102,7 @@ export class JewelsComponent implements OnInit {
   onResize(event?) {
     this.screenHeight = window.innerHeight;
     this.screenWidth = window.innerWidth;
-    if (this.screenHeight > 667 && this.screenWidth < 768) {
+    if (this.screenHeight === 812 && this.screenWidth === 375) {
       this.pendant.nativeElement.classList.add("pendantX");
     }
   }

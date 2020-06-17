@@ -1,94 +1,10 @@
-<!-- <section class="site-section container-fluid">
-  <div class="container">
-    <div class="row align-items-center interior-height justify-content-center"> -->
-<!-- Chamfer ------------------------------------------------------>
-<!-- <div
-        class="col-6"
-        (mouseover)="chamferState = 'finish'"
-        (mouseout)="chamferState = 'start'"
-      >
-        <figure class="img-jewels mx-auto">
-          <img
-            [@animationRosemaryChamferPhoto]="rosemaryState"
-            [@animationChamfer]="chamferState"
-            src="./assets/foto/mountaber_chamfer.jpg"
-            alt="Image"
-            class="photo-collections"
-            height="auto"
-          />
-          <h2
-            [@animationRosemaryChamferText]="rosemaryState"
-            [@animationChamferText]="chamferState"
-          >
-            chamfer
-          </h2>
-        </figure>
-      </div> -->
-
-<!-- Vertical line ------------------------------------------------------------>
-<!-- <div
-        [@animationRosemaryLine]="rosemaryState"
-        [@animationChamferLine]="chamferState"
-        class="vertical-line"
-      ></div> -->
-<!-- rosemary ----------------------------------------------------------------->
-<!-- <div
-        class="col-6"
-        (mouseover)="rosemaryState = 'finish'"
-        (mouseout)="rosemaryState = 'start'"
-      >
-        <figure class="img-jewels mx-auto">
-          <img
-            [@animationRosemary]="rosemaryState"
-            [@animationChamferRosemaryPhoto]="chamferState"
-            src="./assets/foto/mountaber_rosemary.jpg"
-            alt="Image"
-            class="photo-collections"
-            width="100%"
-            height="auto"
-          />
-          <h2
-            [@animationRosemaryText]="rosemaryState"
-            [@animationChamferRosemaryText]="chamferState"
-          >
-            rosemary
-          </h2>
-        </figure>
-      </div>
-    </div> -->
-<!-- row final -->
-<!-- <div
-      [@animationRosemaryChamferCollections]="rosemaryState"
-      [@animationChamferRosemaryCollections]="chamferState"
-      class="collections-text"
-    >
-      <h1>
-        the collections
-      </h1>
-    </div> -->
-
-<!-- Para animacion de Chamfer y Rosemary -->
-<!-- <div
-      [@animationChamferRosemaryTecnica]="chamferState"
-      [@animationRosemaryChamferTecnica]="rosemaryState"
-      class="collections-text"
-    >
-      <h1>
-        la técnica
-      </h1>
-      <p class="padding-text">
-        All Mountaber jewelry is made in situ in Barcelona, following
-        traditional techniques such as fire enamel.
-      </p>
-    </div>
-  </div>
-</section> -->
-
 <section class="site-section container-fluid">
   <div class="container">
-    <div class="row align-items-center interior-height justify-content-center">
+    <div
+      class="row align-items-center interior-height justify-content-center container-portrait margin-top-mobile"
+    >
       <!-- Chamfer ------------------------------------------------------>
-      <div class="col-6">
+      <div class="col-6 gridChamfer">
         <figure
           #chamferBox
           class="img-jewels mx-auto"
@@ -109,9 +25,9 @@
       </div>
 
       <!-- Vertical line ------------------------------------------------------------>
-      <div #verticalLine class="vertical-line"></div>
+      <div #verticalLine class="vertical-line gridLine"></div>
       <!-- rosemary ----------------------------------------------------------------->
-      <div class="col-6">
+      <div class="col-6 gridRosemary">
         <figure
           #rosemaryBox
           class="img-jewels mx-auto"
@@ -131,11 +47,31 @@
           </h2>
         </figure>
       </div>
+
+      <div class="d-none d-block-ipad gridText">
+        <div #theCollections class="collections-text show">
+          <h1 class="show">
+            the collections
+          </h1>
+        </div>
+
+        <!-- Para animacion de Chamfer y Rosemary ipad-->
+        <div #laTecnica class="collections-text-tecnica d-none">
+          <h1>
+            la técnica
+          </h1>
+          <p #laTecnicaP class="padding-text-collections">
+            All Mountaber jewelry is made in situ in Barcelona, following
+            traditional techniques such as fire enamel.
+          </p>
+        </div>
+      </div>
     </div>
-    <!-- row final -->
-    <div #theCollections class="collections-text show">
+
+    <!-- row final pantalla ------------------------------------------------------------------->
+    <div #theCollections class="collections-text show d-none-ipad">
       <h1 class="show">
-        the collections
+        the collectionss
       </h1>
     </div>
 

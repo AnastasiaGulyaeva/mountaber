@@ -26,8 +26,8 @@ figure figcaption:nth-child(5) {
 
 .lens {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  // width: 70px;
+  // height: 70px;
   border-radius: 50%;
   border: 1px solid $text;
   background-repeat: no-repeat;
@@ -65,7 +65,61 @@ figure figcaption:nth-child(5) {
 }
 
 // -------------------------------------min width 1200 ---------------------------------------
-@media (min-width: 1200px) {
+@media (min-width: 991.98px) {
+  figure {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeMD;
+  }
+
+  .lens {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 1px solid $text;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.enamelsAnimation {
+      right: 98px;
+      top: 42px;
+    }
+
+    &.designAnimation {
+      width: 300px;
+      height: 300px;
+      right: 14px;
+      top: 6px;
+    }
+
+    &.polishedAnimation {
+      left: 92px;
+      bottom: 44px;
+    }
+
+    &.stoneAnimation {
+      right: 54px;
+      top: 130px;
+    }
+  }
+
+  .positionP {
+    position: absolute;
+    top: 80%;
+  }
+}
+
+// -------------------------------------min width 1640 ---------------------------------------
+@media (min-width: 1640px) {
   figure {
     position: relative;
     width: 620px;
@@ -113,7 +167,7 @@ figure figcaption:nth-child(5) {
   }
 }
 
-// -------------------------------------max width 767 ---------------------------------------
+// -------------------------------------max width 992 ---------------------------------------
 @media (max-width: 991.98px) {
   figure {
     position: relative;
@@ -177,10 +231,14 @@ figure figcaption:nth-child(5) {
     }
   }
 
+  .colHeight {
+    max-height: 20vh;
+  }
+
   .link--arrowed {
     margin-left: 1.2rem;
     position: absolute;
-    top: 69px;
+    top: 42px;
     right: 14px;
     z-index: 10;
     .arrow-icon {
@@ -300,5 +358,274 @@ figure figcaption:nth-child(5) {
   .positionP {
     position: absolute;
     top: 80%;
+  }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .offset-lg-2 {
+    margin-left: 0%;
+  }
+
+  figure {
+    position: relative;
+    width: 560px;
+    height: 560px;
+    img {
+      width: 560px;
+      height: 560px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeXLiPadPortrait;
+  }
+
+  .lens {
+    width: 108px;
+    height: 108px;
+
+    &.enamelsAnimation {
+      right: 134px;
+      top: 64px;
+    }
+
+    &.designAnimation {
+      width: 440px;
+      height: 440px;
+      right: 8px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 120px;
+      bottom: 70px;
+    }
+
+    &.stoneAnimation {
+      right: 74px;
+      top: 180px;
+    }
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  figure {
+    position: relative;
+    width: 460px;
+    height: 460px;
+    img {
+      width: 460px;
+      height: 460px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeXL;
+  }
+
+  .lens {
+    width: 86px;
+    height: 86px;
+
+    &.enamelsAnimation {
+      right: 114px;
+      top: 54px;
+    }
+
+    &.designAnimation {
+      width: 340px;
+      height: 340px;
+      right: 12px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 100px;
+      bottom: 60px;
+    }
+
+    &.stoneAnimation {
+      right: 62px;
+      top: 146px;
+    }
+  }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  figure {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    img {
+      width: 360px;
+      height: 360px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeMD;
+  }
+
+  .lens {
+    width: 72px;
+    height: 72px;
+
+    &.enamelsAnimation {
+      right: 84px;
+      top: 34px;
+    }
+
+    &.designAnimation {
+      width: 280px;
+      height: 280px;
+      right: 8px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 80px;
+      bottom: 40px;
+    }
+
+    &.stoneAnimation {
+      right: 44px;
+      top: 116px;
+    }
+  }
+
+  .padding-text {
+    padding-right: 60px;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  figure {
+    position: relative;
+    margin: 20px;
+    margin-bottom: 72px;
+    width: 380px;
+    height: 260px;
+    img {
+      margin-left: 60px;
+      margin-right: 60px;
+      width: 260px;
+      height: 260px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeMD;
+  }
+
+  .lens {
+    width: 66px;
+    height: 66px;
+
+    &.enamelsAnimation {
+      right: 118px;
+      top: 24px;
+    }
+
+    &.designAnimation {
+      width: 210px;
+      height: 210px;
+      right: 64px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 112px;
+      bottom: 24px;
+    }
+
+    &.stoneAnimation {
+      right: 84px;
+      top: 72px;
+    }
+  }
+
+  .interior-height {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .colHeight {
+    margin-top: $mBottomS-XS;
+    max-height: 200px;
+    margin-bottom: 26px;
+  }
+
+  .positionP {
+    position: absolute;
+    top: 78%;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .interior-height {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .colHeight {
+    margin-top: $mBottomS-XS;
+    max-height: 200px;
+    margin-bottom: 26px;
+  }
+
+  .positionP {
+    position: absolute;
+    top: 78%;
+  }
+
+  figure {
+    margin-bottom: 64px;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .interior-height {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .colHeight {
+    margin-top: $mBottomS-XS;
+    max-height: 200px;
+    margin-bottom: 26px;
+  }
+
+  .positionP {
+    position: absolute;
+    top: 78%;
+  }
+
+  figure {
+    margin: 20px;
+    margin-bottom: 82px;
   }
 }

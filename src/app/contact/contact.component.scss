@@ -6,20 +6,6 @@ h1 {
   display: flex;
   align-items: flex-end;
 }
-// input {
-//   background: none;
-//   border: none;
-//   border-bottom: 1px solid $text;
-//   width: 100%;
-//   margin-top: 40px;
-//   color: $text;
-//   padding: 0 0 0 12px;
-//   font-size: 12px;
-//   &.ng-valid {
-//     border-bottom: 1px solid $green;
-//     color: $green;
-//   }
-// }
 
 input:focus {
   outline: none;
@@ -32,12 +18,28 @@ input:focus {
 //  animation input ------------------------------------------------------------------------
 
 /* Component Start */
-.input {
+// .input {
+//   position: relative;
+//   z-index: 1;
+//   display: inline-block;
+//   max-width: 100%;
+//   width: calc(100% - 2em);
+//   vertical-align: bottom;
+// }
+
+.input1 {
   position: relative;
   z-index: 1;
   display: inline-block;
-  max-width: 100%;
-  width: calc(100% - 2em);
+  width: 200px;
+  vertical-align: bottom;
+}
+
+.input2 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 320px;
   vertical-align: bottom;
 }
 
@@ -46,7 +48,7 @@ input:focus {
   display: block;
   float: right;
   padding: 0.8em;
-  width: 60%;
+  width: 100%;
   border: none;
   border-radius: 0;
 }
@@ -114,9 +116,13 @@ input:focus {
   transition: stroke-dashoffset 0.3s;
   pointer-events: none;
   stroke: $text;
-  stroke-width: 3;
-  stroke-dasharray: 962;
   stroke-dashoffset: 558;
+}
+.stroke1 {
+  stroke-dasharray: 758;
+}
+.stroke2 {
+  stroke-dasharray: 878;
 }
 
 .input__field--madoka:focus + .input__label--madoka,
@@ -125,8 +131,13 @@ input:focus {
   pointer-events: none;
 }
 
-.input__field--madoka:focus + .input__label--madoka .graphic--madoka,
-.input--filled .graphic--madoka {
+.input__field--madoka:focus + .input__label--madoka .graphic--madoka.stroke1,
+.input--filled .graphic--madoka.stroke1 {
+  stroke-dashoffset: 0;
+}
+
+.input__field--madoka:focus + .input__label--madoka .graphic--madoka.stroke2,
+.input--filled .graphic--madoka.stroke2 {
   stroke-dashoffset: 0;
 }
 
@@ -138,9 +149,54 @@ input:focus {
   transform: scale3d(0.81, 0.81, 1) translate3d(0, 3em, 0);
 }
 
-@media (min-width: 1200px) {
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px $background inset !important;
+  box-shadow: inset 0 0 0 1000px $background !important;
+}
+
+// -------------------------------------------------------- max 1570px -------------------------------------
+@media (min-width: 992px) and (max-width: 1570px) {
   .pContact {
     line-height: 124%;
+  }
+
+  .offset-xl-2 {
+    margin-left: 0%;
+  }
+
+  .col-xl-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-xl-2 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    &.col-xl-my {
+      flex: 0 0 15%;
+      max-width: 15%;
+    }
+  }
+
+  .col-xl-3 {
+    flex: 0 0 35%;
+    max-width: 35%;
+    &.col-xl-my {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+
+  // .input2 {
+  //   width: 200px;
+  // }
+  // .stroke2 {
+  //   stroke-dasharray: 758;
+  // }
+
+  h1 {
+    font-size: 3.7rem;
+    line-height: 120%;
   }
 }
 
@@ -150,7 +206,7 @@ input:focus {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1023.98px) {
   h1 {
     font-size: 1.6rem;
     height: 16vh;
@@ -186,11 +242,374 @@ input:focus {
 // MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
 @media (min-width: 768px) and (max-width: 991.98px) {
   .input__label--madoka {
-    width: 70%;
+    width: 100%;
     height: 100%;
   }
 
   .input__field--madoka {
     width: 100%;
+  }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  h1 {
+    font-size: 4rem !important;
+    line-height: 120%;
+  }
+
+  .offset-lg-2 {
+    margin-left: 0%;
+  }
+
+  .col-lg-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .containerContact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 1fr 1fr 2fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+      "h1 h1"
+      "name email"
+      "phone message"
+      "button p";
+  }
+
+  .h1grid {
+    grid-area: h1;
+  }
+  .namegrid {
+    grid-area: name;
+  }
+  .emailgrid {
+    grid-area: email;
+  }
+  .phonegrid {
+    grid-area: phone;
+  }
+  .messagegrid {
+    grid-area: message;
+  }
+  .buttongrid {
+    grid-area: button;
+  }
+  .pgrid {
+    grid-area: p;
+  }
+  .formBlock {
+    & div:nth-child(2),
+    & div:nth-child(5) {
+      display: none !important;
+    }
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .height-h1 {
+    height: 46vh;
+    line-height: 46vh;
+  }
+
+  .line-height-h1 {
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  h1 {
+    line-height: 120%;
+  }
+
+  .offset-lg-2 {
+    margin-left: 0%;
+  }
+
+  .col-lg-2 {
+    flex: 0 0 23%;
+    max-width: 23%;
+  }
+
+  .col-lg-3 {
+    flex: 0 0 32%;
+    max-width: 32%;
+  }
+  .col-button {
+    flex: 0 0 18% !important;
+    max-width: 18% !important;
+  }
+  .col-p {
+    flex: 0 0 27% !important;
+    max-width: 27% !important;
+  }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .interior-height {
+    height: 79vh;
+  }
+  h1 {
+    margin-top: 46px;
+    margin-bottom: -36px;
+    font-size: 3.5rem;
+    height: auto;
+  }
+  .input1 {
+    width: 320px;
+  }
+  .stroke1 {
+    stroke-dasharray: 878;
+  }
+
+  .col-lg-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pContact {
+    line-height: 125%;
+  }
+
+  .formBlock {
+    & div:nth-child(2),
+    & div:nth-child(5) {
+      display: none !important;
+    }
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .interior-height {
+    height: 79vh;
+  }
+  h1 {
+    font-size: 3.2rem;
+    height: auto;
+  }
+
+  .containerContact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 1fr 1fr 2fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+      "h1 h1"
+      "name email"
+      "phone message"
+      "button p";
+  }
+
+  .h1grid {
+    grid-area: h1;
+  }
+  .namegrid {
+    grid-area: name;
+  }
+  .emailgrid {
+    grid-area: email;
+  }
+  .phonegrid {
+    grid-area: phone;
+  }
+  .messagegrid {
+    grid-area: message;
+  }
+  .buttongrid {
+    grid-area: button;
+  }
+  .pgrid {
+    grid-area: p;
+  }
+
+  .offset-lg-2 {
+    margin-left: 0;
+  }
+
+  .col-lg-7 {
+    max-width: 100%;
+  }
+
+  .col-lg-3 {
+    max-width: 100%;
+  }
+
+  .formBlock {
+    & div:nth-child(2),
+    & div:nth-child(5) {
+      display: none !important;
+    }
+  }
+
+  .pContact {
+    line-height: 125%;
+  }
+  .button {
+    margin-top: 0;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  h1 {
+    margin-bottom: 0;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  h1 {
+    font-size: 3.7rem;
+    height: auto;
+  }
+
+  .col-lg-7 {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .d-none-landscape {
+    display: none;
+  }
+  h1 {
+    font-size: 2.8rem;
+    height: auto;
+  }
+  .formBlock {
+    margin-top: 40px;
+    width: 100%;
+    & > div {
+      margin-bottom: 46px;
+    }
+    & div:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  section {
+    margin-top: $mBottomS-XS;
+  }
+
+  .input__label--madoka {
+    width: 100%;
+  }
+
+  .input1 {
+    width: 320px;
+  }
+  .stroke1 {
+    stroke-dasharray: 878;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .input1 {
+    width: 310px;
+  }
+  .stroke1 {
+    stroke-dasharray: 868;
+  }
+  .input2 {
+    width: 310px;
+  }
+  .stroke2 {
+    stroke-dasharray: 868;
+  }
+  h1 {
+    font-size: 1.5rem;
+    height: 16vh;
+    line-height: 125%;
+  }
+}
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .d-none-landscape {
+    display: none;
+  }
+  h1 {
+    font-size: 2.4rem;
+    height: auto;
+  }
+  .formBlock {
+    margin-top: 40px;
+    width: 100%;
+    & > div {
+      margin-bottom: 46px;
+    }
+    & div:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  section {
+    margin-top: $mBottomS-XS;
+  }
+
+  .input1 {
+    width: 320px;
+  }
+  .stroke1 {
+    stroke-dasharray: 878;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .input1 {
+    width: 320px;
+  }
+  .stroke1 {
+    stroke-dasharray: 878;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .d-none-landscape {
+    display: none;
+  }
+  h1 {
+    font-size: 2.4rem;
+    height: auto;
+  }
+  .formBlock {
+    margin-top: 40px;
+    width: 100%;
+    & > div {
+      margin-bottom: 46px;
+    }
+    & div:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  section {
+    margin-top: $mBottomS-XS;
+  }
+
+  .input1 {
+    width: 320px;
+  }
+  .stroke1 {
+    stroke-dasharray: 878;
   }
 }

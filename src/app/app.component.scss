@@ -1,6 +1,5 @@
 @import "../styles.scss";
-
-// cursor ------------------------------------------------------------
+//--------------------------------------------------------------------------- cursor
 
 @keyframes cursorAnim {
   from {
@@ -35,4 +34,16 @@
   width: 6px;
   background: $text;
   transition: width 0.25s, height 0.25s;
+}
+
+@media (max-width: 992px) {
+  .cursor {
+    height: 0px;
+    width: 0px;
+  }
+
+  .cursor.cursor-dot {
+    height: 0px;
+    width: 0px;
+  }
 }

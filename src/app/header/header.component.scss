@@ -1,12 +1,14 @@
 @import "../../styles.scss";
 
 .myHeader {
-  background-color: $background;
+  // background-color: $background;
   cursor: none;
 }
-
-header {
-  height: 10vh;
+a {
+  z-index: 10;
+}
+figure {
+  z-index: 10;
 }
 
 .nav-link {
@@ -56,23 +58,11 @@ header {
   color: $linkHover;
 }
 
-@media (min-width: 1200px) {
-  .nav {
-    height: 11vh;
-  }
-
-  .box-logo {
-    width: 120px;
-    height: auto;
-  }
-
-  .myHeader {
-    height: 11vh;
-  }
-
-  .nav-link {
-    margin-bottom: 16px;
-  }
+.box-logo-desktop {
+  width: 76px !important;
+}
+.nav-link-desktop {
+  margin-bottom: 6px !important;
 }
 
 @media (min-width: 2400px) {
@@ -82,15 +72,11 @@ header {
   }
 }
 
-// -----------------------------------max 1200 ---------------------------------------------
-@media (max-width: 1200px) {
+// -----------------------------------max 992---------------------------------------------
+@media (max-width: 991.98px) {
   .box-logo {
     width: 100px;
     height: auto;
-  }
-
-  header {
-    height: 16vh;
   }
 
   .myHeader {
@@ -99,8 +85,100 @@ header {
 }
 
 // MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
-@media (min-width: 768px) and (max-width: 991.98px) {
+// @media (min-width: 768px) and (max-width: 991.98px) {
+//   .box-logo {
+//     width: 12px;
+//   }
+// }
+
+// MEDIA QUERIES -------------------------------- min-width: 992px
+@media (min-width: 992px) {
+  .nav {
+    height: 11vh;
+  }
+
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 11vh;
+  }
+
+  .nav-link {
+    margin-bottom: 12px;
+  }
+}
+
+// MEDIA QUERIES -------------------------------- min-width: 1400px
+@media (min-width: 1400px) {
   .box-logo {
     width: 120px;
+  }
+  .nav-link {
+    margin-bottom: 16px;
+  }
+}
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .box-logo {
+    width: 120px;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 100px;
+  }
+
+  .nav-link {
+    margin-bottom: 12px;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 100px;
+  }
+
+  .nav-link {
+    margin-bottom: 12px;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 100px;
+  }
+
+  .nav-link {
+    margin-bottom: 12px;
   }
 }

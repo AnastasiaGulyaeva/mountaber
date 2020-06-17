@@ -1,9 +1,5 @@
 @import "../../styles.scss";
 
-footer {
-  height: 10vh;
-}
-
 .footer-left,
 .footer-right {
   height: 10vh;
@@ -13,7 +9,6 @@ footer {
 // --------------------------------------min width 1200 ------------------------------------------
 @media (min-width: 1200px) {
   footer {
-    height: 9vh;
     background: none;
   }
 
@@ -26,21 +21,16 @@ footer {
 
 // --------------------------------------max width 1200 ------------------------------------------
 @media (max-width: 1200px) {
-  footer {
-    height: 5vh;
-    background: darken($title, 14%);
-  }
-
-  .footer-left {
+  .footer-left,
+  .footer-right {
     height: 5vh;
     margin-bottom: 0px;
-    text-align: center;
   }
 
-  .footer-left p {
+  .footer-left p,
+  .footer-right p {
     font-size: $footerSizeSM;
     line-height: 5vh;
-    color: $background;
   }
 }
 
@@ -48,5 +38,41 @@ footer {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .footer-left p {
     font-size: $footerSizeMD;
+  }
+}
+
+@media (max-width: 991.98px) {
+  footer {
+    background: darken($title, 14%);
+    opacity: 0.9;
+  }
+  .footer-left {
+    text-align: center;
+  }
+  .footer-left p,
+  .footer-right p {
+    color: $background;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .footer-left p {
+    line-height: 30px;
+  }
+  .footer-right {
+    display: none;
+  }
+  .footer-left p {
+    font-size: $footerSizeSM;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .footer-left p {
+    line-height: 30px;
   }
 }

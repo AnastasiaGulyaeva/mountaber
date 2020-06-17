@@ -13,25 +13,43 @@ $font: "FS Siena Regular", Georgia, "Times New Roman", Times, serif !important;
 //  text sizes
 $textSizeXXL: 0.96rem;
 $textSizeXL: 0.98rem;
+$textSizeXLiPadPortrait: 1.2rem;
+$textSizeXLiPadLandscape: 1rem;
 $textSizeLG: 0.82rem;
 $textSizeMD: 0.98rem;
-$textSizeSM: 0.64rem;
+$textSizeSM: 0.78rem;
 $textSizeXS: 0.56rem;
 
 // title sizes h1
 $titleSizeXXL: 5.4rem;
 $titleSizeXL: 6.4rem;
-$titleSizeLG: 5.6rem;
+$titleSizeXLPortrait: 6.4rem;
+$titleSizeXLLandscape: 4.1rem;
+$titleSizeLG: 3.4rem;
+$titleSizeLGLandscape: 3.5rem;
 $titleSizeMD: 5rem;
+$titleSizeMDPortrait: 2.4rem;
+$titleSizeMDLandscape: 4.4rem;
 $titleSizeSM: 3.4rem;
+$titleSizeSMPortrait: 2.4rem;
+$titleSizeSMLandscape: 3.8rem;
+
 $titleSizeXS: 2.4rem;
 
 // title sizes h2
 $h2SizeXXL: 2.4rem;
 $h2SizeXL: 6.4rem;
+$h2SizeXLPortrait: 6.4rem;
+$h2SizeXLLandscape: 2.2rem;
 $h2SizeLG: 5.6rem;
+$h2SizeLGPortrait: 2rem;
+$h2SizeLGLandscape: 2.2rem;
 $h2SizeMD: 5rem;
+$h2SizeMDPortrait: 1.3rem;
+$h2SizeMDLandscape: 2.2rem;
 $h2SizeSM: 3.4rem;
+$h2SizeSMPortrait: 1.3rem;
+$h2SizeSMLandscape: 1.6rem;
 $h2SizeXS: 2.4rem;
 
 // footer text sizes
@@ -50,6 +68,9 @@ $mBottomL-XS: 60px;
 $mBottomM-XL: 36px;
 $mBottomM-MD: 32px;
 $mBottomM-XS: 30px;
+$mBottomM-XS-portrait: 12px;
+
+$mButtonlandscape: 52px;
 
 //  distancias del texto y bottones
 $mBottomS-XL: 24px;
@@ -75,6 +96,77 @@ $mBottomS-XS: 16px;
   line-height: $line-height;
 }
 
+// variables:
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin media($media) {
+  @if $media == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $media == md {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+
+header {
+  @include media(sm) {
+    height: 16vh;
+  }
+  @include media(md) {
+    height: 16vh;
+  }
+  @include media(lg) {
+    height: 16vh;
+  }
+  @include media(xl) {
+    height: 11vh;
+  }
+}
+
+section {
+  @include media(sm) {
+    height: 79vh;
+  }
+  @include media(md) {
+    height: 79vh;
+  }
+  @include media(lg) {
+    height: 79vh;
+  }
+  @include media(xl) {
+    height: 80vh;
+  }
+}
+
+footer {
+  @include media(sm) {
+    height: 5vh;
+  }
+  @include media(md) {
+    height: 5vh;
+  }
+  @include media(lg) {
+    height: 5vh;
+  }
+  @include media(xl) {
+    height: 9vh;
+  }
+}
+
 html {
   font-size: 100%;
 }
@@ -88,11 +180,11 @@ body {
 }
 
 .site-section {
-  height: 80vh;
+  height: 79vh;
 }
 
 .interior-height {
-  height: 80vh;
+  height: 79vh;
 }
 
 p {
@@ -103,10 +195,6 @@ p {
 a {
   @include commonText(13px);
   font-size: $textSizeLG;
-}
-
-.padding-text {
-  padding-right: 80px;
 }
 
 h1 {
@@ -168,12 +256,16 @@ h1 {
   }
 }
 
-// MEDIA QUERIES -------------------------------------------------------- max-width: 576
+:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+// MEDIA QUERIES -------------------------------------------------------- max-width: 576 SM
 @media (max-width: 576px) {
   h1 {
     @include commonTitle(98%);
     font-size: $titleSizeSM;
-    margin-bottom: $mBottomS-XL;
+    margin-bottom: $mBottomS-XS;
   }
 
   h2 {
@@ -183,7 +275,7 @@ h1 {
   }
 
   p {
-    font-size: $textSizeMD;
+    font-size: $textSizeSM;
   }
   .button {
     font-size: $textSizeMD;
@@ -201,12 +293,55 @@ h1 {
 }
 
 // MEDIA QUERIES -------------------------------------------------------- min-width: 1200
+@media (min-width: 992px) {
+  .padding-text {
+    padding-right: 0px;
+  }
+  h2 {
+    font-size: $h2SizeMDLandscape;
+  }
+}
+
+// MEDIA QUERIES -------------------------------------------------------- min-width: 1200
 @media (min-width: 1200px) {
   .container {
     width: 82%;
     max-width: 82%;
   }
 
+  // p {
+  //   @include commonText;
+  //   font-size: $textSizeXXL;
+  // }
+
+  // a {
+  //   @include commonText(13px);
+  //   font-size: $textSizeXXL;
+  // }
+
+  // h1 {
+  //   @include commonTitle(98%);
+  //   font-size: $titleSizeXXL;
+  //   margin-bottom: $mBottomS-XL;
+  // }
+
+  // h2 {
+  //   @include commonTitle(96%);
+  //   font-size: $h2SizeXXL;
+  //   color: $text;
+  // }
+
+  // .button {
+  //   margin-top: $mBottomS-XL;
+  // }
+
+  // .padding-text {
+  //   padding-right: 120px;
+  // }
+}
+
+// MEDIA QUERIES -------------------------------------------------------- min-width: 1860
+@media (min-width: 1860px) {
   p {
     @include commonText;
     font-size: $textSizeXXL;
@@ -238,50 +373,149 @@ h1 {
   }
 }
 
-// MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
-@media (min-width: 768px) and (max-width: 991.98px) {
+// MEDIA QUERIES -------------------------------------------------------- min-width:1500
+@media (min-width: 1500px) {
+  .padding-text {
+    padding-right: 80px;
+  }
+}
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
   h1 {
-    font-size: $titleSizeMD;
+    font-size: $titleSizeXLPortrait;
   }
   p {
-    font-size: $textSizeMD;
+    font-size: $textSizeXLiPadPortrait;
+  }
+  .padding-text {
+    padding-right: 30%;
   }
 }
 
-// @media (min-width: 1400px) { }
-// @media (min-width: 1600px) { }
-// @media (min-width: 1750px) { }
-// @media (min-width: 1850px) { }
-// @media (min-width: 2000px) { }
-
-/* // Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+/* Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  h1 {
+    font-size: $titleSizeXLLandscape;
+  }
+  p {
+    font-size: $textSizeXL;
+  }
+  .padding-text {
+    padding-right: 16%;
+  }
+  h2 {
+    font-size: $h2SizeXLLandscape;
+  }
 }
 
-/* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023.98px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  h2 {
+    font-size: $h2SizeLGPortrait;
+  }
+  h1 {
+    font-size: $titleSizeLGLandscape;
+  }
 }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  h1 {
+    font-size: $titleSizeLGLandscape;
+  }
+  h2 {
+    font-size: $h2SizeMDLandscape;
+  }
 }
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  header {
+    height: 130px;
+  }
+  section {
+    height: auto;
+  }
+  footer {
+    height: 30px;
+  }
+  h1 {
+    font-size: $titleSizeMDLandscape;
+    margin-bottom: $mBottomM-XS-portrait;
+  }
 }
 
-/* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) and (max-width: 1349.98px) {
+/* ----------- iPhone X ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  h2 {
+    font-size: $h2SizeMDPortrait;
+  }
+  h1 {
+    font-size: $titleSizeMDPortrait;
+  }
 }
 
-/* // Extra large devices (Xlarge desktops, 1350px and up) */
-@media (min-width: 1350px) and (max-width: 1499.98px) {
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  h1 {
+    font-size: $titleSizeSMLandscape;
+  }
+
+  h2 {
+    font-size: $h2SizeSMLandscape;
+  }
 }
 
-/* // Extra large devices (XXlarge desktops, 1500px and up) */
-@media (min-width: 1500px) and (max-width: 1649.98px) {
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  h1 {
+    font-size: $titleSizeSMPortrait;
+  }
+  h2 {
+    font-size: $h2SizeSMPortrait;
+  }
+}
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  header {
+    height: 130px;
+  }
+  section {
+    height: auto;
+  }
+  footer {
+    height: 30px;
+  }
+  h1 {
+    font-size: $titleSizeSMLandscape;
+  }
+  h2 {
+    font-size: $h2SizeSMPortrait;
+  }
 }
 
-/* // Extra large devices (XXXlarge desktops, 1700px and up) */
-@media (min-width: 1700px) {
+/* ----------- iPhone 6+ ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  header {
+    height: 130px;
+  }
+  section {
+    height: auto;
+  }
+  footer {
+    height: 30px;
+  }
+  h1 {
+    font-size: $titleSizeSMLandscape;
+  }
+
+  h2 {
+    font-size: $h2SizeSMLandscape;
+  }
 }
