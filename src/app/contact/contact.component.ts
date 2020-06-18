@@ -6,6 +6,7 @@ import {
   QueryList,
 } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { MessageService } from "../services/message.service";
 
 @Component({
   selector: "app-contact",
@@ -17,7 +18,7 @@ export class ContactComponent implements OnInit {
   @ViewChildren("input") input: QueryList<ElementRef>;
   form: FormGroup;
 
-  constructor() {}
+  constructor(public messageService: MessageService) {}
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -25,7 +26,6 @@ export class ContactComponent implements OnInit {
       email: new FormControl("", [Validators.email, Validators.required]),
       phone: new FormControl("", [
         Validators.required,
-        // Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$"),
         Validators.minLength(5),
       ]),
       message: new FormControl("", [Validators.maxLength(256)]),
@@ -33,11 +33,10 @@ export class ContactComponent implements OnInit {
   }
 
   submit() {
-    if (this.form.valid) {
-      const formdata = { ...this.form.value };
-
-      console.log(formdata);
-    }
+    console.log(this.form.value);
+    this.messageService.sendMessage(this.form.value).subscribe(() => {
+      alert("Enviado");
+    });
   }
 
   inputChange(i: number) {

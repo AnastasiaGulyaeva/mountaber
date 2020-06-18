@@ -15,6 +15,8 @@ import { CollectionsComponent } from "./collections/collections.component";
 import { DotSliderComponent } from "./dot-slider/dot-slider.component";
 import { IconsComponent } from "./icons/icons.component";
 import { HamburgerComponent } from "./hamburger/hamburger.component";
+import { HttpClientModule } from "@angular/common/http";
+import { MessageService } from "./services/message.service";
 
 @NgModule({
   declarations: [
@@ -36,8 +38,9 @@ import { HamburgerComponent } from "./hamburger/hamburger.component";
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
