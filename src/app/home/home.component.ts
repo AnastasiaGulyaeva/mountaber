@@ -1,10 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-} from "@angular/core";
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import {
   trigger,
   state,
@@ -14,12 +8,14 @@ import {
   query,
   stagger,
 } from "@angular/animations";
+import { circles } from "../animations/animation";
 
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
   animations: [
+    circles,
     trigger("titleAnimation", [
       transition(":enter", [
         // hide the inner elements
@@ -48,41 +44,6 @@ import {
       ]),
     ]),
 
-    // trigger("photoAnimation2", [
-    //   state(
-    //     "start",
-    //     style({
-    //       opacity: "0",
-    //     })
-    //   ),
-
-    //   state(
-    //     "finish",
-    //     style({
-    //       opacity: "1",
-    //     })
-    //   ),
-
-    //   transition("* <=> *", [animate("0.6s cubic-bezier(0, 0.55, 0.45, 1)")]),
-    // ]),
-
-    // trigger("photoAnimation3", [
-    //   state(
-    //     "start",
-    //     style({
-    //       opacity: "1",
-    //     })
-    //   ),
-
-    //   state(
-    //     "finish",
-    //     style({
-    //       opacity: "0",
-    //     })
-    //   ),
-    //   transition("* <=> *", [animate("0.6s cubic-bezier(0, 0.55, 0.45, 1)")]),
-    // ]),
-
     // --------------------------------------- text animation ---------------------------------------
     trigger("textAnimationClick", [
       transition(":enter", [
@@ -98,11 +59,6 @@ export class HomeComponent implements OnInit {
   @ViewChild("photo", { static: true }) photo: ElementRef;
   @ViewChild("imageTopLG", { static: false }) imageTopLG: ElementRef;
   @ViewChild("imageTopXS", { static: false }) imageTopXS: ElementRef;
-  // imageSrc = "./assets/foto/mountaber-chamfer-home.jpg";
-  // images = [
-  //   "./assets/foto/mountaber-chamfer-home.jpg",
-  //   "./assets/foto/mountaber-home2.jpg",
-  // ];
 
   constructor() {}
 
@@ -111,7 +67,6 @@ export class HomeComponent implements OnInit {
   animation(i) {
     this.animationState = this.animationState === "start" ? "finish" : "start";
     this.toggle = this.toggle === true ? false : true;
-    // this.imageSrc = this.images[i];
     this.imageTopLG.nativeElement.classList.toggle("imgTransparent");
     this.imageTopXS.nativeElement.classList.toggle("imgTransparent");
   }

@@ -70,6 +70,74 @@ h1 {
   }
 }
 
+.circles {
+  position: fixed;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translatey(0px);
+  opacity: 0.9;
+  &.circle-LG {
+    top: 33%;
+    left: 80%;
+    width: 150px;
+    height: 150px;
+    background: $carmine;
+    animation: floatLG 6s ease-in-out infinite;
+  }
+  &.circle-MD {
+    top: 20%;
+    left: -3%;
+    width: 120px;
+    height: 120px;
+    background: $green;
+    animation: floatMD 7s ease-in-out infinite;
+  }
+  &.circle-SM {
+    top: 75%;
+    left: 39%;
+    width: 50px;
+    height: 50px;
+    background: $title;
+    animation: floatSM 5s ease-in-out infinite;
+  }
+}
+
+@keyframes floatLG {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes floatMD {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(6px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes floatSM {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
 // ------------------------------------- min-width 2000px ------------------------------------------
 @media (min-width: 2000px) {
 }

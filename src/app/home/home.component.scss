@@ -63,6 +63,42 @@ h1 {
   }
 }
 
+@keyframes floatLG {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes floatMD {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(6px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes floatSM {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
 // -----------------------------------------max-width 1200 ----------------------------------
 @media (max-width: 991.98px) {
   h1 {
@@ -172,41 +208,5 @@ h1 {
   }
   .padding-text {
     padding-right: 64px;
-  }
-}
-
-@keyframes floatLG {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-10px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-
-@keyframes floatMD {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(6px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-
-@keyframes floatSM {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-8px);
-  }
-  100% {
-    transform: translatey(0px);
   }
 }

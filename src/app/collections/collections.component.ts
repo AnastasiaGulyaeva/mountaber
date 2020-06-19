@@ -1,13 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-import {
-  trigger,
-  state,
-  style,
-  transition,
-  animate,
-  query,
-  group,
-} from "@angular/animations";
 
 @Component({
   selector: "app-collections",

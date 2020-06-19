@@ -14,7 +14,7 @@ import {
   query,
   stagger,
 } from "@angular/animations";
-import { titleAnimation } from "../animations/animationTitle";
+import { titleAnimation } from "../animations/animation";
 
 @Component({
   selector: "app-stamp",

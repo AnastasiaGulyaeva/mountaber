@@ -15,11 +15,14 @@ import {
   stagger,
 } from "@angular/animations";
 
+import { circles } from "../animations/animation";
+
 @Component({
   selector: "app-jewels",
   templateUrl: "./jewels.component.html",
   styleUrls: ["./jewels.component.scss"],
   animations: [
+    circles,
     trigger("animationJewels", [
       transition(":enter", [
         style({ opacity: 0 }),

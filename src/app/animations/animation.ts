@@ -30,3 +30,12 @@ export const titleAnimation = [
     ]),
   ]),
 ];
+
+export const circles = [
+  trigger("circles", [
+    transition(":enter", [
+      style({ opacity: 0 }),
+      animate("0.4s linear", style({ opacity: 1 })),
+    ]),
+  ]),
+];

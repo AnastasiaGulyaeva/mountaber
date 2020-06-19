@@ -7,25 +7,82 @@ h1 {
   align-items: flex-end;
 }
 
-input:focus {
-  outline: none;
+input {
+  &:focus {
+    outline: none;
+  }
+  &.ng-invalid.ng-touched {
+    color: lighten($carmine, 6%);
+  }
+  &.ng-valid.ng-touched {
+    color: lighten($green, 14%);
+  }
 }
 
+// tooltip
+// .wrapper {
+//   // position: relative;
+//   -webkit-transform: translateZ(0); /* webkit flicker fix */
+//   -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+// }
+
+// .wrapper .tooltip {
+//   background: $text;
+//   bottom: 100%;
+//   color: $background;
+//   display: block;
+//   left: 0px;
+//   margin-bottom: 0px;
+//   opacity: 0;
+//   padding: 10px 20px;
+//   pointer-events: none;
+//   position: absolute;
+//   width: auto;
+//   -webkit-transform: translateY(10px);
+//   -moz-transform: translateY(10px);
+//   -ms-transform: translateY(10px);
+//   -o-transform: translateY(10px);
+//   transform: translateY(10px);
+//   -webkit-transition: all 0.25s ease-out;
+//   -moz-transition: all 0.25s ease-out;
+//   -ms-transition: all 0.25s ease-out;
+//   -o-transition: all 0.25s ease-out;
+//   transition: all 0.25s ease-out;
+//   -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+//   -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+//   -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+//   -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+//   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+// }
+
+// /* CSS Triangles - see Trevor's post */
+// .wrapper .tooltip:after {
+//   content: " ";
+//   border-left: solid transparent 10px;
+//   border-right: solid transparent 10px;
+//   border-top: solid $text 10px;
+//   bottom: -10px;
+//   height: 0;
+//   left: 30%;
+//   margin-left: -13px;
+//   position: absolute;
+//   width: 0;
+// }
+
+// .wrapper-show .tooltip {
+//   opacity: 1;
+//   pointer-events: auto;
+//   -webkit-transform: translateY(0px);
+//   -moz-transform: translateY(0px);
+//   -ms-transform: translateY(0px);
+//   -o-transform: translateY(0px);
+//   transform: translateY(0px);
+// }
+
+// --------------------------------------------------
 .pContact {
   line-height: 100%;
 }
-
-//  animation input ------------------------------------------------------------------------
-
-/* Component Start */
-// .input {
-//   position: relative;
-//   z-index: 1;
-//   display: inline-block;
-//   max-width: 100%;
-//   width: calc(100% - 2em);
-//   vertical-align: bottom;
-// }
 
 .input1 {
   position: relative;
@@ -240,14 +297,22 @@ input:-webkit-autofill {
 }
 
 // MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .input__label--madoka {
-    width: 100%;
-    height: 100%;
+@media (max-width: 991.98px) {
+  .input1 {
+    width: 320px;
+  }
+  .stroke1 {
+    stroke-dasharray: 878;
   }
 
-  .input__field--madoka {
-    width: 100%;
+  .formBlock {
+    & div:nth-child(2),
+    & div:nth-child(5) {
+      display: none !important;
+    }
+  }
+  h1 {
+    font-size: 3rem;
   }
 }
 

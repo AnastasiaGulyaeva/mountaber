@@ -260,6 +260,29 @@ h1 {
   outline: -webkit-focus-ring-color auto 0px;
 }
 
+// -------------------------- sweet alert
+
+.swal2-popup {
+  border: solid 1px $text !important;
+  font-family: $font !important;
+  font-size: 1rem !important;
+  background: $background !important;
+  border-radius: 0em !important;
+}
+
+.swal2-title {
+  color: $text !important;
+  font-size: 1.6rem !important;
+  font-weight: 100 !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: 0.25em solid lighten($green, 54%) !important;
+}
+.swal2-icon.swal2-success [class^="swal2-success-line"] {
+  background-color: lighten($green, 24%) !important;
+}
+
 // MEDIA QUERIES -------------------------------------------------------- max-width: 576 SM
 @media (max-width: 576px) {
   h1 {

@@ -7,6 +7,8 @@ import {
 } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { MessageService } from "../services/message.service";
+//  Sweet Alert 2
+import Swal from "sweetalert2";
 
 @Component({
   selector: "app-contact",
@@ -35,7 +37,13 @@ export class ContactComponent implements OnInit {
   submit() {
     console.log(this.form.value);
     this.messageService.sendMessage(this.form.value).subscribe(() => {
-      alert("Enviado");
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "The message has been sent successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     });
   }
 
