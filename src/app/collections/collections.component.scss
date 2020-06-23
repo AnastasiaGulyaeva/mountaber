@@ -37,14 +37,14 @@ figure h2 {
 .collections-text-tecnica {
   position: fixed;
   // right: 10%;
-  left: 64%;
+  left: 50%;
   width: 400px;
   bottom: 10vh;
   transition: $standard-transition;
 }
 
 .laTecnicaMove {
-  transform: translateX(-44vw);
+  transform: translateX(-100%);
 }
 
 // .padding-text-collections {
@@ -205,44 +205,6 @@ figure h2 {
 
 .d-none-ipad {
   display: none !important;
-}
-
-/* ----------- min-width: 992px MD ----------- */
-@media (max-width: 1400px) {
-  // .img-jewels {
-  //   width: 260px;
-  //   height: 260px;
-  // }
-  // // .photo-collections {
-  // //   width: 300px;
-  // //   height: 300px;
-  // // }
-
-  figure h2 {
-    left: 38%;
-  }
-
-  // .vertical-line {
-  //   top: 39%;
-  // }
-
-  .collections-text-tecnica {
-    width: 330px;
-    left: 61%;
-  }
-  .laTecnicaMove {
-    transform: translateX(-140%);
-  }
-
-  .img-jewels .left-h2-emphasis {
-    top: 140% !important;
-    left: 14% !important;
-  }
-
-  .img-jewels .right-h2-emphasis {
-    top: 140% !important;
-    left: 56% !important;
-  }
 }
 
 /* ----------- iPad Pro 12.9" ----------- */
