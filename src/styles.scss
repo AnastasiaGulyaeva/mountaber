@@ -15,7 +15,7 @@ $textSizeXXL: 0.96rem;
 $textSizeXL: 0.98rem;
 $textSizeXLiPadPortrait: 1.2rem;
 $textSizeXLiPadLandscape: 1rem;
-$textSizeLG: 0.82rem;
+$textSizeLG: 0.88rem;
 $textSizeMD: 0.98rem;
 $textSizeSM: 0.78rem;
 $textSizeXS: 0.56rem;
@@ -25,7 +25,7 @@ $titleSizeXXL: 5.4rem;
 $titleSizeXL: 6.4rem;
 $titleSizeXLPortrait: 6.4rem;
 $titleSizeXLLandscape: 4.1rem;
-$titleSizeLG: 3.4rem;
+$titleSizeLG: 4rem;
 $titleSizeLGLandscape: 3.5rem;
 $titleSizeMD: 5rem;
 $titleSizeMDPortrait: 2.4rem;
@@ -133,7 +133,7 @@ header {
     height: 16vh;
   }
   @include media(xl) {
-    height: 11vh;
+    height: 14vh;
   }
 }
 
@@ -148,7 +148,7 @@ section {
     height: 79vh;
   }
   @include media(xl) {
-    height: 80vh;
+    height: 77vh;
   }
 }
 
@@ -167,6 +167,10 @@ footer {
   }
 }
 
+* {
+  cursor: none;
+}
+
 html {
   font-size: 100%;
 }
@@ -176,11 +180,6 @@ body {
   font-family: $font;
   color: $text;
   height: 100vh;
-  cursor: none;
-}
-
-.site-section {
-  height: 79vh;
 }
 
 .interior-height {
@@ -216,11 +215,11 @@ h2 {
   margin-top: $mBottomS-XL;
   width: 100px;
   background: rgba($background, 0.5);
+  cursor: none;
 
   &:hover {
     color: $linkHover;
     border: 1px solid $linkHover;
-    cursor: none;
     transition: color cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
   }
 }

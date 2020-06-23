@@ -1,7 +1,7 @@
 @import "../../styles.scss";
 
 figure {
-  margin-top: -11vh;
+  margin-top: -14vh;
   margin-left: -3.5vw;
   width: 74%;
 }
@@ -79,16 +79,16 @@ h1 {
   &.circle-LG {
     top: 33%;
     left: 80%;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background: $carmine;
     animation: floatLG 6s ease-in-out infinite;
   }
   &.circle-MD {
     top: 20%;
-    left: -3%;
-    width: 120px;
-    height: 120px;
+    left: -2.5%;
+    width: 76px;
+    height: 76px;
     background: $green;
     animation: floatMD 7s ease-in-out infinite;
   }

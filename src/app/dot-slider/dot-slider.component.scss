@@ -9,25 +9,25 @@
   height: auto;
 
   & li {
-    margin: 16px auto;
+    margin: 12.5px auto;
     list-style: none;
     position: relative;
     display: block;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background: $text;
     border-radius: 50%;
   }
 
   & li.menu-active {
     background: $linkHover;
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
   }
   & li.menu-active-collections {
     background: $linkHover;
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
   }
 }
 

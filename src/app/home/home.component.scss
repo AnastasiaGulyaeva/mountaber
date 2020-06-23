@@ -48,8 +48,8 @@ h1 {
   &.circle-MD {
     top: 78%;
     left: 34%;
-    width: 100px;
-    height: 100px;
+    width: 76px;
+    height: 76px;
     background: $carmine;
     animation: floatMD 7s ease-in-out infinite;
   }
@@ -98,8 +98,8 @@ h1 {
     transform: translatey(0px);
   }
 }
-
-// -----------------------------------------max-width 1200 ----------------------------------
+//
+// -----------------------------------------max-width 991 ----------------------------------
 @media (max-width: 991.98px) {
   h1 {
     & span:nth-child(2),
@@ -118,6 +118,21 @@ h1 {
 
   h1 {
     color: $text;
+  }
+
+  .circles {
+    &.circle-MD {
+      top: 77%;
+      left: 90%;
+      width: 60px;
+      height: 60px;
+    }
+    &.circle-SM {
+      top: 105px;
+      left: 78%;
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
