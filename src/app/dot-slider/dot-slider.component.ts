@@ -13,7 +13,6 @@ export class DotSliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.location.onUrlChange((url: string) => {
-      console.log(url);
       if (url == "/collections") {
         this.liCollections.nativeElement.classList.add(
           "menu-active-collections"

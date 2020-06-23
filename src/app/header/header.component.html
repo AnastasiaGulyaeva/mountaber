@@ -31,12 +31,21 @@
 
       <!--------------------------------- logo ---------------------------------------------->
       <div class="col-md-6 col-lg-2 d-flex align-content-end flex-wrap">
-        <figure #logo class="box-logo mx-auto">
+        <figure #logo class="box-logo mx-auto" routerLink="/">
           <img
-            routerLink="/"
+            (mouseover)="logoHover()"
+            (mouseout)="logoOut()"
             id="logo"
-            class="logo"
+            class="logo d-block"
             src="./assets/logoWeb.svg"
+            alt="Mountaber"
+            width="100%"
+            height="auto"
+          />
+          <img
+            id="logo-gold"
+            class="logo d-none"
+            src="./assets/logoWeb-gold.svg"
             alt="Mountaber"
             width="100%"
             height="auto"
