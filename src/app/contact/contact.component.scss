@@ -215,13 +215,6 @@ input:-webkit-autofill {
     div:nth-child(4) {
       margin-bottom: 2vh;
     }
-
-    div:nth-child(6),
-    div:nth-child(7),
-    div:nth-child(8),
-    div:nth-child(9) {
-      margin-bottom: 12vh;
-    }
   }
 
   .line-height-h1 {
@@ -234,13 +227,26 @@ input:-webkit-autofill {
       vertical-align: middle;
     }
   }
-
-  // .formInputs {
-  //   margin-bottom: 5vh;
-  //   div {
-      
-  //   }
-  // }
+}
+@media (min-width: 992px) and (max-width: 1449.98px) {
+  .containerContact {
+    div:nth-child(6),
+    div:nth-child(7),
+    div:nth-child(8),
+    div:nth-child(9) {
+      margin-bottom: 9vh;
+    }
+  }
+}
+@media (min-width: 1450px) {
+  .containerContact {
+    div:nth-child(6),
+    div:nth-child(7),
+    div:nth-child(8),
+    div:nth-child(9) {
+      margin-bottom: 12vh;
+    }
+  }
 }
 // -------------------------------------------------------- max 1570px -------------------------------------
 @media (min-width: 992px) and (max-width: 1570px) {
