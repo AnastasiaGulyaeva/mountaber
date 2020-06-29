@@ -30,8 +30,15 @@ export class ContactComponent implements OnInit {
         Validators.required,
         Validators.minLength(5),
       ]),
-      message: new FormControl("", [Validators.maxLength(256)]),
+      message: new FormControl("", [
+        Validators.required,
+        Validators.maxLength(256),
+      ]),
     });
+  }
+
+  get f() {
+    return this.form.controls;
   }
 
   submit() {

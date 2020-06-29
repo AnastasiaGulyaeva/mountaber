@@ -29,12 +29,10 @@
         </nav>
       </div>
 
-      <!--------------------------------- logo ---------------------------------------------->
-      <div class="col-md-6 col-lg-2 d-flex align-content-end flex-wrap">
-        <figure #logo class="box-logo mx-auto" routerLink="/">
+      <!--------------------------------- logo align-content-end d-flex flex-wrap ---------------------------------------------->
+      <div class="col-md-6 col-lg-2 grid-container">
+        <figure #logo class="box-logo mx-auto grid-logo" routerLink="/">
           <img
-            (mouseover)="logoHover()"
-            (mouseout)="logoOut()"
             id="logo"
             class="logo d-block"
             src="./assets/logoWeb.svg"

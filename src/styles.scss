@@ -18,6 +18,7 @@ $textSizeXLiPadLandscape: 1rem;
 $textSizeLG: 0.88rem;
 $textSizeMD: 0.98rem;
 $textSizeSM: 0.78rem;
+$textSizeSMPortrait: 0.88rem;
 $textSizeXS: 0.56rem;
 
 // title sizes h1
@@ -28,10 +29,10 @@ $titleSizeXLLandscape: 4.1rem;
 $titleSizeLG: 4rem;
 $titleSizeLGLandscape: 3.5rem;
 $titleSizeMD: 5rem;
-$titleSizeMDPortrait: 2.4rem;
+$titleSizeMDPortrait: 3rem;
 $titleSizeMDLandscape: 4.4rem;
 $titleSizeSM: 3.4rem;
-$titleSizeSMPortrait: 2.4rem;
+$titleSizeSMPortrait: 3rem;
 $titleSizeSMLandscape: 3.8rem;
 
 $titleSizeXS: 2.4rem;
@@ -257,6 +258,9 @@ h1 {
 
 :focus {
   outline: -webkit-focus-ring-color auto 0px;
+  outline: -ms-focus-ring-color auto 0px;
+  outline: -o-focus-ring-color auto 0px;
+  outline: -moz-focus-ring-color auto 0px;
 }
 
 // -------------------------- sweet alert
@@ -500,6 +504,9 @@ h1 {
   }
   h2 {
     font-size: $h2SizeSMPortrait;
+  }
+  p {
+    font-size: $textSizeSMPortrait;
   }
 }
 /* Landscape */

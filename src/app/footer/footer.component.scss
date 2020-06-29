@@ -15,7 +15,6 @@
   .footer-left p,
   .footer-right p {
     line-height: 10vh;
-    font-size: $footerSizeXXL;
   }
 }
 
@@ -29,18 +28,11 @@
 
   .footer-left p,
   .footer-right p {
-    font-size: $footerSizeSM;
     line-height: 5vh;
   }
 }
 
 // MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .footer-left p {
-    font-size: $footerSizeMD;
-  }
-}
-
 @media (max-width: 991.98px) {
   footer {
     background: darken($title, 14%);
@@ -63,9 +55,6 @@
   }
   .footer-right {
     display: none;
-  }
-  .footer-left p {
-    font-size: $footerSizeSM;
   }
 }
 

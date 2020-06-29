@@ -121,6 +121,10 @@ h1 {
   }
 
   .circles {
+    &.circle-LG {
+      top: 20%;
+      left: 15%;
+    }
     &.circle-MD {
       top: 77%;
       left: 90%;

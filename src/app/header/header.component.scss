@@ -1,5 +1,14 @@
 @import "../../styles.scss";
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  // height: 16vh;
+}
+.grid-logo {
+  align-self: end;
+}
+
 .myHeader {
   cursor: none;
 }
@@ -67,6 +76,18 @@ figure {
 // .logoHover {
 // }
 
+@media (max-width: 1200px) {
+  .grid-container {
+    height: 16vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    height: 14vh;
+  }
+}
+
 @media (min-width: 2400px) {
   .box-logo {
     width: 140px;
@@ -85,13 +106,6 @@ figure {
     height: 16vh;
   }
 }
-
-// MEDIA QUERIES -------------------------------- min-width: 768  and  max-width: 991.98px
-// @media (min-width: 768px) and (max-width: 991.98px) {
-//   .box-logo {
-//     width: 12px;
-//   }
-// }
 
 // MEDIA QUERIES -------------------------------- min-width: 992px
 @media (min-width: 992px) {
