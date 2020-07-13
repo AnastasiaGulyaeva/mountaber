@@ -17,7 +17,8 @@ import { IconsComponent } from "./icons/icons.component";
 import { HamburgerComponent } from "./hamburger/hamburger.component";
 import { HttpClientModule } from "@angular/common/http";
 import { MessageService } from "./services/message.service";
-import { CookiesComponent } from './components/cookies/cookies.component';
+import { CookiesComponent } from './views/cookies/cookies.component';
+import { CreditsComponent } from './views/credits/credits.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CookiesComponent } from './components/cookies/cookies.component';
     IconsComponent,
     HamburgerComponent,
     CookiesComponent,
+    CreditsComponent,
   ],
   imports: [
     BrowserModule,

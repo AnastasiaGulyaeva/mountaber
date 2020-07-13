@@ -5,7 +5,8 @@ import { StampComponent } from "./stamp/stamp.component";
 import { JewelsComponent } from "./jewels/jewels.component";
 import { ContactComponent } from "./contact/contact.component";
 import { CollectionsComponent } from "./collections/collections.component";
-import { CookiesComponent } from './components/cookies/cookies.component';
+import { CookiesComponent } from './views/cookies/cookies.component';
+import { CreditsComponent } from './views/credits/credits.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: "contact-us", component: ContactComponent },
   { path: "collections", component: CollectionsComponent },
   { path: "cookies", component: CookiesComponent },
+  { path: "credits", component: CookiesComponent },
 ];
 
 @NgModule({
