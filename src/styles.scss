@@ -27,6 +27,7 @@ $titleSizeXL: 6.4rem;
 $titleSizeXLPortrait: 6.4rem;
 $titleSizeXLLandscape: 4.1rem;
 $titleSizeLG: 4rem;
+$titleSizeLGPortrait: 4.4rem;
 $titleSizeLGLandscape: 3.5rem;
 $titleSizeMD: 5rem;
 $titleSizeMDPortrait: 3rem;
@@ -256,6 +257,17 @@ h1 {
   }
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #d0b38b;
+}
+
+::selection {
+  color: white;
+  background: #d0b38b;
+}
+
 :focus {
   outline: -webkit-focus-ring-color auto 0px;
   outline: -ms-focus-ring-color auto 0px;
@@ -442,7 +454,7 @@ h1 {
     font-size: $h2SizeLGPortrait;
   }
   h1 {
-    font-size: $titleSizeLGLandscape;
+    font-size: $titleSizeLGPortrait;
   }
 }
 

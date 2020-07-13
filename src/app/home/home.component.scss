@@ -1,7 +1,6 @@
 @import "../../styles.scss";
 .text-z-index {
-  position: relative;
-  z-index: 1000;
+  z-index: 1;
 }
 
 figure {
@@ -37,6 +36,7 @@ h1 {
   overflow: hidden;
   transform: translatey(0px);
   opacity: 0.9;
+  z-index: -1;
   &.circle-LG {
     top: 26%;
     left: 19%;
@@ -158,6 +158,14 @@ h1 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
+  figure {
+    width: 100%;
+    margin-bottom: -44px;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Landscape */
@@ -171,6 +179,13 @@ h1 {
 }
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023.98px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .padding-text {
+    padding-right: 25%;
+  }
+}
+
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   figure {
@@ -200,11 +215,17 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   }
+  section {
+    margin-top: 160px;
+  }
 }
 
 /* ----------- iPhone 6 ----------- */
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  // section {
+  //   margin-top: 100px;
+  // }
   figure {
     margin-top: $mBottomS-XS;
   }
@@ -213,6 +234,9 @@ h1 {
   }
   .padding-text {
     padding-right: 64px;
+  }
+  section {
+    margin-top: 160px;
   }
 }
 
@@ -227,5 +251,8 @@ h1 {
   }
   .padding-text {
     padding-right: 64px;
+  }
+  section {
+    margin-top: 160px;
   }
 }

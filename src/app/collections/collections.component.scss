@@ -197,10 +197,6 @@ figure h2 {
     width: 260px;
     height: 260px;
   }
-  // .photo-collections {
-  //   width: 260px;
-  //   height: 260px;
-  // }
 
   .img-jewels .emphasis-left-img {
     transform-origin: top left;
@@ -224,17 +220,11 @@ figure h2 {
   }
 
   .collections-text {
-    position: static;
-    transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
   }
+
   .collections-text-tecnica {
-    position: absolute;
-    transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
-    width: 500px;
-    bottom: 8%;
-    left: 29vw;
+    width: 450px;
   }
 
   .padding-text-collections {
@@ -248,11 +238,10 @@ figure h2 {
   .container-portrait {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr 4fr 2fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-template-rows: 22vh 10vh 22vh 25vh;
     justify-items: stretch;
     align-items: stretch;
+    height: 79vh;
     grid-template-areas:
       "chamfer"
       "line"
@@ -273,6 +262,34 @@ figure h2 {
   }
   .gridText {
     grid-area: text;
+    height: 25vh;
+    position: relative;
+
+    div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto auto;
+      height: 200px;
+    }
+
+    div.collections-text {
+      text-align: center;
+    }
+
+    div.collections-text-tecnica {
+      width: 450px;
+    }
+  }
+
+  .padding-text-collections {
+    padding-right: 0%;
+  }
+
+  .laTecnicaMove {
+    transform: translateX(0%);
   }
 
   .vertical-line {
@@ -297,10 +314,6 @@ figure h2 {
     width: 300px;
     height: 300px;
   }
-  // .photo-collections {
-  //   width: 300px;
-  //   height: 300px;
-  // }
 
   figure h2 {
     left: 38%;
@@ -327,17 +340,13 @@ figure h2 {
   }
 }
 
-/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------------------------------- iPad 1, 2, Mini and Air ------------------------------------------- */
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023.98px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .img-jewels {
     width: 160px;
     height: 160px;
   }
-  // .photo-collections {
-  //   width: 160px;
-  //   height: 160px;
-  // }
 
   .img-jewels .emphasis-left-img {
     transform-origin: top left;
@@ -360,21 +369,6 @@ figure h2 {
     left: 66% !important;
   }
 
-  .collections-text {
-    position: static;
-    transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
-    margin-left: auto;
-    margin-right: auto;
-    width: 353px;
-  }
-  .collections-text-tecnica {
-    position: absolute;
-    transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
-    width: 350px;
-    bottom: 8%;
-    left: 35vw;
-  }
-
   .laTecnicaMove {
     transform: translateX(0%);
   }
@@ -382,10 +376,10 @@ figure h2 {
   .container-portrait {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr 4fr 2fr;
-    grid-row-gap: 20px;
+    grid-template-rows: 22vh 10vh 22vh 25vh;
     justify-items: stretch;
     align-items: stretch;
+    height: 79vh;
     grid-template-areas:
       "chamfer"
       "line"
@@ -406,6 +400,27 @@ figure h2 {
   }
   .gridText {
     grid-area: text;
+    height: 25vh;
+    position: relative;
+
+    div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto auto;
+    }
+
+    div.collections-text {
+      text-align: center;
+      height: 50px;
+    }
+
+    div.collections-text-tecnica {
+      width: 270px;
+      height: 140px;
+    }
   }
 
   .vertical-line {
@@ -430,10 +445,6 @@ figure h2 {
     width: 260px;
     height: 260px;
   }
-  // .photo-collections {
-  //   width: 260px;
-  //   height: 260px;
-  // }
 
   figure h2 {
     left: 36%;
@@ -498,21 +509,6 @@ figure h2 {
     left: 66% !important;
   }
 
-  // .collections-text {
-  //   position: static;
-  //   transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   width: 243px;
-  // }
-  .collections-text-tecnica {
-    position: absolute;
-    transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
-    width: 220px;
-    bottom: 8.5%;
-    left: 26vw;
-  }
-
   .laTecnicaMove {
     transform: translateX(0%);
   }
@@ -520,10 +516,10 @@ figure h2 {
   .container-portrait {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 3fr 3fr 2fr;
-    grid-row-gap: 20px;
+    grid-template-rows: 22vh 10vh 22vh 25vh;
     justify-items: stretch;
     align-items: stretch;
+    height: 79vh;
     grid-template-areas:
       "chamfer"
       "line"
@@ -544,6 +540,27 @@ figure h2 {
   }
   .gridText {
     grid-area: text;
+    height: 25vh;
+    position: relative;
+
+    div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto auto;
+    }
+
+    div.collections-text {
+      text-align: center;
+      height: 50px;
+    }
+
+    div.collections-text-tecnica {
+      width: 270px;
+      height: 120px;
+    }
   }
 
   .vertical-line {
@@ -568,10 +585,6 @@ figure h2 {
     width: 160px;
     height: 160px;
   }
-  // .photo-collections {
-  //   width: 160px;
-  //   height: 160px;
-  // }
   .interior-height {
     height: auto;
   }
@@ -641,10 +654,7 @@ figure h2 {
     width: 160px;
     height: 160px;
   }
-  // .photo-collections {
-  //   width: 160px;
-  //   height: 160px;
-  // }
+
   .interior-height {
     height: auto;
   }
@@ -703,10 +713,6 @@ figure h2 {
     width: 120px;
     height: 120px;
   }
-  // .photo-collections {
-  //   width: 120px;
-  //   height: 120px;
-  // }
 
   .img-jewels .emphasis-left-img {
     transform-origin: top left;
@@ -718,6 +724,7 @@ figure h2 {
   figure h2 {
     left: 39%;
   }
+
   .img-jewels #rosemary-h2 {
     left: 39%;
   }
@@ -734,21 +741,6 @@ figure h2 {
     left: 66% !important;
   }
 
-  .collections-text {
-    position: static;
-    transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
-    margin-left: auto;
-    margin-right: auto;
-    width: 243px;
-  }
-  .collections-text-tecnica {
-    position: absolute;
-    transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
-    width: 300px;
-    bottom: 8.5%;
-    left: 12vw;
-  }
-
   .laTecnicaMove {
     transform: translateX(0%);
   }
@@ -756,11 +748,12 @@ figure h2 {
   .container-portrait {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr 4fr 2fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-template-rows: 22vh 10vh 22vh 25vh;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     justify-items: stretch;
     align-items: stretch;
+    height: 79vh;
     grid-template-areas:
       "chamfer"
       "line"
@@ -779,8 +772,30 @@ figure h2 {
     grid-area: rosemary;
     align-self: start;
   }
+
   .gridText {
     grid-area: text;
+    height: 25vh;
+    position: relative;
+
+    div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto auto;
+    }
+
+    div.collections-text {
+      text-align: center;
+      height: 50px;
+    }
+
+    div.collections-text-tecnica {
+      width: 270px;
+      height: 120px;
+    }
   }
 
   .vertical-line {

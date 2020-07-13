@@ -1,11 +1,19 @@
 <section class="site-section container-fluid">
-  <div class="container">
+  <div class="container container-height">
     <div #row class="row d-flex align-items-center interior-height">
       <div class="col-md-12 col-lg-4 offset-lg-2 colHeight">
         <h1
           @titleAnimation
+          [@changeStateTitleMobile]="currentState"
+          class="align-middle d-lg-none"
+        >
+          <span>Ergo,</span> <br />
+          <span>Mountaber</span>
+        </h1>
+        <h1
+          @titleAnimation
           [@changeStateTitle]="currentState"
-          class="align-middle"
+          class="align-middle d-none d-lg-block"
         >
           <span>Ergo,</span> <br />
           <span>Mountaber</span>

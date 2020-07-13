@@ -245,6 +245,9 @@ h1 {
     grid-column-gap: 40px;
     justify-items: stretch;
     align-items: stretch;
+    &.paddingRight25 {
+      padding-right: 0%;
+    }
   }
 }
 
@@ -275,8 +278,8 @@ h1 {
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
   figure {
-    margin-top: -9.5vh;
-    margin-right: 19.7vw;
+    margin-top: -8%;
+    margin-right: 10.7vw;
     width: 34%;
     margin-bottom: 36px;
   }
@@ -294,6 +297,9 @@ h1 {
     grid-column-gap: 40px;
     justify-items: stretch;
     align-items: stretch;
+    &.paddingRight25 {
+      padding-right: 0%;
+    }
   }
 }
 
@@ -323,7 +329,7 @@ h1 {
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   figure {
-    margin-top: -9.5vh;
+    margin-top: -8%;
     margin-right: 15.8vw;
     width: 42%;
     margin-bottom: 36px;
@@ -342,6 +348,9 @@ h1 {
     grid-column-gap: 40px;
     justify-items: stretch;
     align-items: stretch;
+    &.paddingRight25 {
+      padding-right: 0%;
+    }
   }
 }
 
@@ -361,7 +370,7 @@ h1 {
 /* Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
   figure {
-    margin-top: -9.5vh;
+    margin-top: -8%;
     margin-right: 17.7vw;
     width: 38%;
     margin-bottom: 36px;
@@ -380,5 +389,8 @@ h1 {
     grid-column-gap: 40px;
     justify-items: stretch;
     align-items: stretch;
+    &.paddingRight25 {
+      padding-right: 0%;
+    }
   }
 }

@@ -1,12 +1,43 @@
 @import "../../styles.scss";
-
-.grid-container {
+header {
+  z-index: 2;
+}
+.grid-container-logo {
   display: grid;
   grid-template-columns: 1fr;
-  // height: 16vh;
 }
 .grid-logo {
   align-self: end;
+}
+
+.grid-container-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  justify-items: stretch;
+  align-items: end;
+  height: 14vh;
+}
+.grid-menu {
+  align-self: end;
+  text-align: center;
+}
+
+figure {
+  z-index: 10;
+  .cls-1,
+  .cls-2 {
+    fill: $text;
+    -webkit-transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+    -moz-transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+    transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+  }
+  &:hover .cls-2 {
+    fill: $title;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .myHeader {
@@ -15,20 +46,17 @@
 a {
   z-index: 10;
 }
-figure {
-  z-index: 10;
-}
 
 .nav-link {
   margin-bottom: 17px;
 }
 
-// horisontal line
+// horisontal line -------------------------------------------------
 .line {
   border-bottom: 1px solid $text;
 }
 
-// vertical line
+// menu hover effect ----------------------------------------------------
 .menu-line {
   position: relative;
 }
@@ -66,6 +94,7 @@ figure {
   color: $linkHover;
 }
 
+// ---------------------------------------
 .box-logo-desktop {
   width: 76px !important;
 }
@@ -73,21 +102,21 @@ figure {
   margin-bottom: 6px !important;
 }
 
-// .logoHover {
-// }
-
+// ---------------------------------- max 1200 ----------------------------------------
 @media (max-width: 1200px) {
   .grid-container {
     height: 16vh;
   }
 }
 
+//  --------------------------------------- mmin 1200 -------------------------------------
 @media (min-width: 1200px) {
   .grid-container {
     height: 14vh;
   }
 }
 
+//  --------------------------------------- mmin 2400 -------------------------------------
 @media (min-width: 2400px) {
   .box-logo {
     width: 140px;
@@ -107,7 +136,7 @@ figure {
   }
 }
 
-// MEDIA QUERIES -------------------------------- min-width: 992px
+// MEDIA QUERIES ----------------------- min 992 ----------------------------------------------
 @media (min-width: 992px) {
   .nav {
     height: 14vh;
@@ -127,13 +156,21 @@ figure {
   }
 }
 
-// MEDIA QUERIES -------------------------------- min-width: 1400px
+// MEDIA QUERIES -------------------------------- min 1400 -----------------------------
 @media (min-width: 1400px) {
   .box-logo {
     width: 120px;
   }
   .nav-link {
     margin-bottom: 16px;
+  }
+}
+
+// * ----------- iPad Pro 12.9" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) and (min-width: 1024px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .grid-container {
+    height: 14vh;
   }
 }
 /* ----------- iPad 1, 2, Mini and Air ----------- */

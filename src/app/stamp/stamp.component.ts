@@ -156,18 +156,34 @@ import { titleAnimation } from "../animations/animation";
       transition("text => title", [animate("0.5s ease-out")]),
     ]),
 
+    trigger("changeStateTitleMobile", [
+      state(
+        "title",
+        style({ transform: "translateX(0) translateY(-50%)", opacity: 1 })
+      ),
+      state(
+        "text",
+        style({
+          transform: "translateX(-180%) translateY(-50%)",
+          opacity: 0,
+        })
+      ),
+      transition("title => text", [animate("0.5s ease-in")]),
+      transition("text => title", [animate("0.5s ease-out")]),
+    ]),
+
     trigger("changeStateText", [
       state(
         "text",
         style({
-          transform: "translateX(0) translateY(-100%)",
+          transform: " translateX(0) translateY(-50%)",
           opacity: 1,
         })
       ),
       state(
         "title",
         style({
-          transform: "translateX(180%) translateY(-100%)",
+          transform: "translateX(180%) translateY(-50%)",
           opacity: 0,
         })
       ),
