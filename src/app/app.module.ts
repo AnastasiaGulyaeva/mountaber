@@ -17,6 +17,7 @@ import { IconsComponent } from "./icons/icons.component";
 import { HamburgerComponent } from "./hamburger/hamburger.component";
 import { HttpClientModule } from "@angular/common/http";
 import { MessageService } from "./services/message.service";
+import { CookiesComponent } from './components/cookies/cookies.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MessageService } from "./services/message.service";
     DotSliderComponent,
     IconsComponent,
     HamburgerComponent,
+    CookiesComponent,
   ],
   imports: [
     BrowserModule,
