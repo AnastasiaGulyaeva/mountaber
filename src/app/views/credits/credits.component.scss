@@ -4,6 +4,20 @@ h2 {
     padding: 2rem 15% 0.96rem 0;
 }
 
+li {
+    list-style: none;
+}
+
+.uEuropeTitle,
+.uEuropeP {
+    color: #000;
+}
+
+.uEuropeTitle {
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
 .circles {
     position: fixed;
     border-radius: 50%;
@@ -88,6 +102,10 @@ h2 {
     h2 {
         font-size: $h2SizeLGPortrait;
     }
+
+    .uEuropeTitle {
+        font-size: $h2SizeSMLandscape;
+    }
 }
 
 // Min width 992 px
@@ -108,5 +126,14 @@ h2 {
     }
     .mRight {
         margin-right: $mRight;
+    }
+    .uEuropeTitle {
+        font-size: $h2SizeSMLandscape;
+    }
+    .uEuropeP {
+        font-size: $h2SizeMDPortrait;
+    }
+    .mTop-title {
+        margin-top: $mTop-titleL-XL;
     }
 }

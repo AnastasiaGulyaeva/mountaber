@@ -19,6 +19,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { MessageService } from "./services/message.service";
 import { CookiesComponent } from './views/cookies/cookies.component';
 import { CreditsComponent } from './views/credits/credits.component';
+import { LegalAdvertisementComponent } from './views/legal-advertisement/legal-advertisement.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CreditsComponent } from './views/credits/credits.component';
     HamburgerComponent,
     CookiesComponent,
     CreditsComponent,
+    LegalAdvertisementComponent,
   ],
   imports: [
     BrowserModule,

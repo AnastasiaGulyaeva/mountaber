@@ -7,6 +7,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { CollectionsComponent } from "./collections/collections.component";
 import { CookiesComponent } from './views/cookies/cookies.component';
 import { CreditsComponent } from './views/credits/credits.component';
+import { LegalAdvertisementComponent } from './views/legal-advertisement/legal-advertisement.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "collections", component: CollectionsComponent },
   { path: "cookies", component: CookiesComponent },
   { path: "credits", component: CreditsComponent },
+  { path: "legal-advertisement", component: LegalAdvertisementComponent },
 ];
 
 @NgModule({

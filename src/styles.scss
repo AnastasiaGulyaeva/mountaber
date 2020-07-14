@@ -15,10 +15,10 @@ $textSizeXXL: 0.96rem;
 $textSizeXL: 0.98rem;
 $textSizeXLiPadPortrait: 1.2rem;
 $textSizeXLiPadLandscape: 1rem;
-$textSizeLG: 0.88rem;
+$textSizeLG: 0.94rem;
 $textSizeMD: 0.98rem;
-$textSizeSM: 0.78rem;
-$textSizeSMPortrait: 0.88rem;
+$textSizeSM: 0.92rem;
+$textSizeSMPortrait: 0.94rem;
 $textSizeXS: 0.56rem;
 
 // title sizes h1
@@ -55,12 +55,12 @@ $h2SizeSMLandscape: 1.6rem;
 $h2SizeXS: 2.4rem;
 
 // footer text sizes
-$footerSizeXXL: 0.88rem;
-$footerSizeXL: 0.88rem;
-$footerSizeLG: 0.88rem;
-$footerSizeMD: 0.88rem;
+$footerSizeXXL: 0.94rem;
+$footerSizeXL: 0.94rem;
+$footerSizeLG: 0.94rem;
+$footerSizeMD: 0.94rem;
 $footerSizeSM: 0.67rem;
-$footerSizeXS: 0.88rem;
+$footerSizeXS: 0.94rem;
 
 // margin sizes
 $mTop-titleL-XL: 32px;
@@ -285,6 +285,14 @@ h1 {
   outline: -ms-focus-ring-color auto 0px;
   outline: -o-focus-ring-color auto 0px;
   outline: -moz-focus-ring-color auto 0px;
+}
+
+.goldText {
+  color: darken($color: $title, $amount: 24%);
+}
+.underline {
+  text-decoration: underline;
+  line-height: 160%;
 }
 
 // -------------------------- sweet alert
