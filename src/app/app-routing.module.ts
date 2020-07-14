@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: "contact-us", component: ContactComponent },
   { path: "collections", component: CollectionsComponent },
   { path: "cookies", component: CookiesComponent },
-  { path: "credits", component: CookiesComponent },
+  { path: "credits", component: CreditsComponent },
 ];
 
 @NgModule({
