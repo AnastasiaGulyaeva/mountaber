@@ -6,6 +6,45 @@
   margin-bottom: 26px;
 }
 
+// menu hover effect ----------------------------------------------------
+.menu-line {
+  position: relative;
+}
+
+.menu-line:hover {
+  color: $linkHover;
+  transition: color cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+  text-decoration: none;
+}
+
+.menu-line:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: -170%;
+  background: $linkHover;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-line:hover::after {
+  -webkit-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+  opacity: 1;
+  color: $text;
+}
+
+.menu-active {
+  color: $linkHover;
+}
+
 // --------------------------------------min width 1200 ------------------------------------------
 @media (min-width: 1200px) {
   footer {
