@@ -15,7 +15,7 @@ import {
   stagger,
 } from "@angular/animations";
 
-import { circles } from "../../animations/animation";
+import { circles } from "../../shared/animations/animation";
 
 @Component({
   selector: "app-jewels",
