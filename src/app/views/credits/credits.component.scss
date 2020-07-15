@@ -1,0 +1,139 @@
+@import "../../../styles.scss";
+
+h2 {
+    padding: 2rem 15% 0.96rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+.uEuropeTitle,
+.uEuropeP {
+    color: #000;
+}
+
+.uEuropeTitle {
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.circles {
+    position: fixed;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translatey(0px);
+    opacity: 0.9;
+    &.circle-LG {
+        top: 33%;
+        left: 80%;
+        width: 100px;
+        height: 100px;
+        background: $carmine;
+        animation: floatLG 6s ease-in-out infinite;
+    }
+    &.circle-MD {
+        top: 20%;
+        left: -2.5%;
+        width: 76px;
+        height: 76px;
+        background: $green;
+        animation: floatMD 7s ease-in-out infinite;
+    }
+    &.circle-SM {
+        top: 75%;
+        left: 39%;
+        width: 50px;
+        height: 50px;
+        background: $title;
+        animation: floatSM 5s ease-in-out infinite;
+    }
+}
+
+@keyframes floatLG {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes floatMD {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(6px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes floatSM {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-8px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+// ------------------------------------- max-width 992px ------------------------------------------
+
+// Min width 992 px
+@media (max-width: 992px) {
+    .circles {
+        &.circle-SM {
+            top: 77%;
+            left: 19%;
+        }
+    }
+    .mTop-title {
+        margin-top: $mTop-titleL-XL;
+    }
+    h2 {
+        font-size: $h2SizeLGPortrait;
+    }
+
+    .uEuropeTitle {
+        font-size: $h2SizeSMLandscape;
+    }
+}
+
+// Min width 992 px
+@media (min-width: 992px) {
+    .mTop {
+        margin-top: $mTopL-XL;
+    }
+    .min-h-53 {
+        min-height: 53vh;
+    }
+    .min-h-26 {
+        min-height: 26vh;
+    }
+
+    p,
+    li {
+        margin-bottom: 8px;
+    }
+    .mRight {
+        margin-right: $mRight;
+    }
+    .uEuropeTitle {
+        font-size: $h2SizeSMLandscape;
+    }
+    .uEuropeP {
+        font-size: $h2SizeMDPortrait;
+    }
+    .mTop-title {
+        margin-top: $mTop-titleL-XL;
+    }
+}

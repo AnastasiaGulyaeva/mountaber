@@ -1,0 +1,258 @@
+@import "../../../styles.scss";
+.text-z-index {
+  z-index: 1;
+}
+
+figure {
+  position: relative;
+  width: 125%;
+  z-index: -1000;
+  margin-left: -25%;
+}
+
+h1 {
+  & span:nth-child(3) {
+    margin-right: 1.4rem;
+  }
+}
+
+.imgLG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.imgTransparent {
+  opacity: 0;
+}
+
+.circles {
+  position: fixed;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translatey(0px);
+  opacity: 0.9;
+  z-index: -1;
+  &.circle-LG {
+    top: 26%;
+    left: 19%;
+    width: 150px;
+    height: 150px;
+    background: lighten($text, 44%);
+    animation: floatLG 6s ease-in-out infinite;
+  }
+  &.circle-MD {
+    top: 78%;
+    left: 34%;
+    width: 76px;
+    height: 76px;
+    background: $carmine;
+    animation: floatMD 7s ease-in-out infinite;
+  }
+  &.circle-SM {
+    top: 17%;
+    left: 73%;
+    width: 50px;
+    height: 50px;
+    background: $title;
+    animation: floatSM 5s ease-in-out infinite;
+  }
+}
+
+@keyframes floatLG {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes floatMD {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(6px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes floatSM {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+//
+// -----------------------------------------max-width 991 ----------------------------------
+@media (max-width: 991.98px) {
+  h1 {
+    & span:nth-child(2),
+    & span:nth-child(1) {
+      margin-right: 1.2rem;
+    }
+  }
+
+  figure {
+    width: 100%;
+    margin-bottom: -44px;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    color: $text;
+  }
+
+  .circles {
+    &.circle-LG {
+      top: 20%;
+      left: 15%;
+    }
+    &.circle-MD {
+      top: 77%;
+      left: 90%;
+      width: 60px;
+      height: 60px;
+    }
+    &.circle-SM {
+      top: 105px;
+      left: 78%;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .img-iPad-display {
+    display: block !important;
+  }
+  .img-iPad-display-none {
+    display: none !important;
+  }
+
+  .offset-lg-2 {
+    margin-left: 0%;
+  }
+
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  figure {
+    width: 100%;
+    margin-bottom: -44px;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  figure {
+    position: relative;
+    width: 125%;
+    margin-left: -25%;
+    margin-bottom: 0px;
+  }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023.98px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .padding-text {
+    padding-right: 25%;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  figure {
+    position: relative;
+    width: 125%;
+    margin-left: -25%;
+    margin-bottom: 0px;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  figure {
+    margin-top: $mBottomS-XS;
+  }
+  .button {
+    margin-bottom: $mButtonlandscape;
+  }
+  .padding-text {
+    padding-right: 64px;
+  }
+
+  figure {
+    width: 100%;
+    margin-bottom: -44px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section {
+    margin-top: 160px;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  // section {
+  //   margin-top: 100px;
+  // }
+  figure {
+    margin-top: $mBottomS-XS;
+  }
+  .button {
+    margin-bottom: $mButtonlandscape;
+  }
+  .padding-text {
+    padding-right: 64px;
+  }
+  section {
+    margin-top: 160px;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  figure {
+    margin-top: $mBottomS-XS;
+  }
+  .button {
+    margin-bottom: $mButtonlandscape;
+  }
+  .padding-text {
+    padding-right: 64px;
+  }
+  section {
+    margin-top: 160px;
+  }
+}

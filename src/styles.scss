@@ -15,10 +15,10 @@ $textSizeXXL: 0.96rem;
 $textSizeXL: 0.98rem;
 $textSizeXLiPadPortrait: 1.2rem;
 $textSizeXLiPadLandscape: 1rem;
-$textSizeLG: 0.88rem;
+$textSizeLG: 0.94rem;
 $textSizeMD: 0.98rem;
-$textSizeSM: 0.78rem;
-$textSizeSMPortrait: 0.88rem;
+$textSizeSM: 0.92rem;
+$textSizeSMPortrait: 0.94rem;
 $textSizeXS: 0.56rem;
 
 // title sizes h1
@@ -55,14 +55,22 @@ $h2SizeSMLandscape: 1.6rem;
 $h2SizeXS: 2.4rem;
 
 // footer text sizes
-$footerSizeXXL: 0.88rem;
-$footerSizeXL: 0.88rem;
-$footerSizeLG: 0.88rem;
-$footerSizeMD: 0.88rem;
+$footerSizeXXL: 0.94rem;
+$footerSizeXL: 0.94rem;
+$footerSizeLG: 0.94rem;
+$footerSizeMD: 0.94rem;
 $footerSizeSM: 0.67rem;
-$footerSizeXS: 0.88rem;
+$footerSizeXS: 0.94rem;
 
 // margin sizes
+$mTop-titleL-XL: 32px;
+$mTop-titleL-MD: 29px;
+$mTop-titleL-XS: 26px;
+
+$mTopL-XL: 166px;
+$mTopL-MD: 162px;
+$mTopL-XS: 160px;
+
 $mBottomL-XL: 66px;
 $mBottomL-MD: 62px;
 $mBottomL-XS: 60px;
@@ -73,6 +81,8 @@ $mBottomM-XS: 30px;
 $mBottomM-XS-portrait: 12px;
 
 $mButtonlandscape: 52px;
+
+$mRight: 3rem;
 
 //  distancias del texto y bottones
 $mBottomS-XL: 24px;
@@ -188,7 +198,9 @@ body {
   height: 79vh;
 }
 
-p {
+p,
+ul,
+li {
   @include commonText;
   font-size: $textSizeLG;
 }
@@ -275,6 +287,14 @@ h1 {
   outline: -moz-focus-ring-color auto 0px;
 }
 
+.goldText {
+  color: darken($color: $title, $amount: 24%);
+}
+.underline {
+  text-decoration: underline;
+  line-height: 160%;
+}
+
 // -------------------------- sweet alert
 
 .swal2-popup {
@@ -312,7 +332,9 @@ h1 {
     color: $text;
   }
 
-  p {
+  p, 
+  ul,
+  li {
     font-size: $textSizeSM;
   }
   .button {
@@ -380,7 +402,9 @@ h1 {
 
 // MEDIA QUERIES -------------------------------------------------------- min-width: 1860
 @media (min-width: 1860px) {
-  p {
+  p,
+  ul,
+  li {
     @include commonText;
     font-size: $textSizeXXL;
   }
@@ -423,7 +447,9 @@ h1 {
   h1 {
     font-size: $titleSizeXLPortrait;
   }
-  p {
+  p,
+  ul,
+  li {
     font-size: $textSizeXLiPadPortrait;
   }
   .padding-text {
@@ -517,7 +543,9 @@ h1 {
   h2 {
     font-size: $h2SizeSMPortrait;
   }
-  p {
+  p,
+  ul,
+  li {
     font-size: $textSizeSMPortrait;
   }
 }

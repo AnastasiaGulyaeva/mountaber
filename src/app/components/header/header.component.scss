@@ -1,0 +1,237 @@
+@import "../../../styles.scss";
+header {
+  z-index: 2;
+}
+.grid-container-logo {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid-logo {
+  align-self: end;
+}
+
+.grid-container-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  justify-items: stretch;
+  align-items: end;
+  height: 14vh;
+}
+.grid-menu {
+  align-self: end;
+  text-align: center;
+}
+
+figure {
+  z-index: 10;
+  .cls-1,
+  .cls-2 {
+    fill: $text;
+    -webkit-transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+    -moz-transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+    transition: fill cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+  }
+  &:hover .cls-2 {
+    fill: $title;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.myHeader {
+  cursor: none;
+}
+a {
+  z-index: 10;
+}
+
+.nav-link {
+  margin-bottom: 17px;
+}
+
+// horisontal line -------------------------------------------------
+.line {
+  border-bottom: 1px solid $text;
+}
+
+// menu hover effect ----------------------------------------------------
+.menu-line {
+  position: relative;
+}
+
+.menu-line:hover {
+  color: $linkHover;
+  transition: color cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+}
+
+.menu-line:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: -60%;
+  background: $linkHover;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-line:hover::after {
+  -webkit-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+  opacity: 1;
+  color: $text;
+}
+
+.menu-active {
+  color: $linkHover;
+}
+
+// ---------------------------------------
+.box-logo-desktop {
+  width: 76px !important;
+}
+.nav-link-desktop {
+  margin-bottom: 6px !important;
+}
+
+// ---------------------------------- max 1200 ----------------------------------------
+@media (max-width: 1200px) {
+  .grid-container {
+    height: 16vh;
+  }
+}
+
+//  --------------------------------------- mmin 1200 -------------------------------------
+@media (min-width: 1200px) {
+  .grid-container {
+    height: 14vh;
+  }
+}
+
+//  --------------------------------------- mmin 2400 -------------------------------------
+@media (min-width: 2400px) {
+  .box-logo {
+    width: 140px;
+    height: auto;
+  }
+}
+
+// -----------------------------------max 992---------------------------------------------
+@media (max-width: 991.98px) {
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 16vh;
+  }
+}
+
+// MEDIA QUERIES ----------------------- min 992 ----------------------------------------------
+@media (min-width: 992px) {
+  .nav {
+    height: 14vh;
+  }
+
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 14vh;
+  }
+
+  .nav-link {
+    margin-bottom: 12px;
+  }
+}
+
+// MEDIA QUERIES -------------------------------- min 1400 -----------------------------
+@media (min-width: 1400px) {
+  .box-logo {
+    width: 120px;
+  }
+  .nav-link {
+    margin-bottom: 16px;
+  }
+}
+
+// * ----------- iPad Pro 12.9" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) and (min-width: 1024px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .grid-container {
+    height: 14vh;
+  }
+}
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .box-logo {
+    width: 120px;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 100px;
+  }
+
+  .nav-link {
+    margin-bottom: 12px;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 100px;
+  }
+
+  .nav-link {
+    margin-bottom: 12px;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .box-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .myHeader {
+    height: 100px;
+  }
+
+  .nav-link {
+    margin-bottom: 12px;
+  }
+}

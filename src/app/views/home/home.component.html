@@ -1,0 +1,94 @@
+<section class="site-section container-fluid">
+  <div class="container">
+    <div @circles class="circles circle-LG"></div>
+    <div @circles class="circles circle-MD"></div>
+    <div @circles class="circles circle-SM"></div>
+
+    <div class="row align-items-center interior-height">
+      <div class="col-md-12 col-lg-4 offset-lg-2 text-z-index">
+        <div class="d-block d-lg-none img-iPad-display">
+          <figure @photoAnimation>
+            <img
+              src="./assets/img/photo/mountaber-rosemary-home.jpg"
+              alt="mountaber-collections-home"
+              class="img-fluid imgBottom"
+              width="100%"
+              height="auto"
+            />
+
+            <img
+              #imageTopXS
+              src="./assets/img/photo/mountaber-chamfer-home.jpg"
+              alt="mountaber-collections-home"
+              class="imgLG"
+              width="100%"
+              height="auto"
+            />
+          </figure>
+        </div>
+
+        <div>
+          <h1 @titleAnimation>
+            <span>perpetual</span> <br />
+            <span>fine</span>
+            <span>jewelry</span>
+          </h1>
+
+          <p
+            @textAnimationClick
+            *ngIf="toggle; else part2"
+            class="padding-text"
+          >
+            Traditionally, high jewelry has been associated with author jewelry
+            (auteur jewelry), in which behind every gem there is a well-known
+            artisan whose sole gnature is enough to relate the jewel to the
+            ideas of quality and luxury.
+          </p>
+
+          <ng-template #part2>
+            <p @textAnimationClick class="padding-text">
+              For Mountaber, high jewelry is something else. It is the sum of
+              talent, research and effort of artisans throughout centuries of
+              work. All of this confers a unique nature and jewelry culture to
+              each corner of the world.
+            </p>
+          </ng-template>
+
+          <button
+            *ngIf="toggle; else less"
+            (click)="animation(1)"
+            class="button"
+            type="button"
+          >
+            more
+          </button>
+
+          <ng-template #less>
+            <button (click)="animation(0)" class="button" type="button">
+              less
+            </button>
+          </ng-template>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-6 d-none d-lg-block img-iPad-display-none">
+        <figure @photoAnimation>
+          <img
+            src="./assets/img/photo/mountaber-rosemary-home.jpg"
+            alt="mountaber-collections-home"
+            class="img-fluid imgBottom"
+            width="100%"
+            height="auto"
+          />
+          <img
+            #imageTopLG
+            src="./assets/img/photo/mountaber-chamfer-home.jpg"
+            alt="mountaber-collections-home"
+            class="imgLG"
+            width="100%"
+            height="auto"
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

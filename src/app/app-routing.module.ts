@@ -1,10 +1,14 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from "./home/home.component";
-import { StampComponent } from "./stamp/stamp.component";
-import { JewelsComponent } from "./jewels/jewels.component";
-import { ContactComponent } from "./contact/contact.component";
-import { CollectionsComponent } from "./collections/collections.component";
+import { HomeComponent } from "./views/home/home.component";
+import { StampComponent } from "./views/stamp/stamp.component";
+import { JewelsComponent } from "./views/jewels/jewels.component";
+import { ContactComponent } from "./views/contact/contact.component";
+import { CollectionsComponent } from "./views/collections/collections.component";
+import { CookiesComponent } from './views/cookies/cookies.component';
+import { CreditsComponent } from './views/credits/credits.component';
+import { LegalAdvertisementComponent } from './views/legal-advertisement/legal-advertisement.component';
+
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -12,6 +16,9 @@ const routes: Routes = [
   { path: "the-jewels", component: JewelsComponent },
   { path: "contact-us", component: ContactComponent },
   { path: "collections", component: CollectionsComponent },
+  { path: "cookies", component: CookiesComponent },
+  { path: "credits", component: CreditsComponent },
+  { path: "legal-advertisement", component: LegalAdvertisementComponent },
 ];
 
 @NgModule({
