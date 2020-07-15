@@ -1,0 +1,138 @@
+<section class="site-section container-fluid">
+  <div class="container container-height">
+    <div #row class="row d-flex align-items-center interior-height">
+      <div class="col-md-12 col-lg-4 offset-lg-2 colHeight">
+        <h1
+          @titleAnimation
+          [@changeStateTitleMobile]="currentState"
+          class="align-middle d-lg-none"
+        >
+          <span>Ergo,</span> <br />
+          <span>Mountaber</span>
+        </h1>
+        <h1
+          @titleAnimation
+          [@changeStateTitle]="currentState"
+          class="align-middle d-none d-lg-block"
+        >
+          <span>Ergo,</span> <br />
+          <span>Mountaber</span>
+        </h1>
+        <p
+          [@changeStateText]="currentState"
+          class="padding-text d-lg-none positionP"
+        >
+          We are named after the hill on which the Romans settled in Barcelona,
+          Mont Taber (Mount Taber). Because the fact is that the origins of
+          Civilization are also the origins of our jewelry tradition, an art
+          which grew thanks to the rise of guilds between the 12th and 14th
+          centuries. As well as to the legacy that certain artistic movements,
+          such as Catalan Modernism, have left.
+        </p>
+
+        <p @textAnimation class="padding-text d-none d-lg-block">
+          We are named after the hill on which the Romans settled in Barcelona,
+          Mont Taber (Mount Taber). Because the fact is that the origins of
+          Civilization are also the origins of our jewelry tradition, an art
+          which grew thanks to the rise of guilds between the 12th and 14th
+          centuries. As well as to the legacy that certain artistic movements,
+          such as Catalan Modernism, have left.
+        </p>
+        <div
+          (click)="moreText()"
+          @arrowAnimation
+          #arrow
+          class="link--arrowed"
+          href="#"
+        >
+          <svg
+            class="arrow-icon d-block d-lg-none"
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+          >
+            <g
+              fill="none"
+              stroke="#6b6863"
+              stroke-width="1"
+              stroke-linejoin="round"
+              stroke-miterlimit="10"
+            >
+              <circle
+                class="arrow-icon--circle"
+                cx="16"
+                cy="16"
+                r="15.12"
+              ></circle>
+              <path
+                class="arrow-icon--arrow"
+                d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div @RingTotalAnimation class="col-md-12 col-lg-6">
+        <figure class="mx-auto">
+          <img
+            [@animationRing]="animationRing"
+            src="./assets/img/photo/mountaber-stamp-ring.jpg"
+            alt="Image"
+          />
+          <figcaption
+            (mouseover)="animationDesign()"
+            (mouseout)="animationDesign()"
+            [@animationText]="animationStateDesign"
+          >
+            design
+          </figcaption>
+          <figcaption
+            (mouseover)="animationEnamels()"
+            (mouseout)="animationEnamels()"
+            [@animationText]="animationStateEnamels"
+          >
+            enamels
+          </figcaption>
+          <figcaption
+            (mouseover)="animationPolished()"
+            (mouseout)="animationPolished()"
+            [@animationText]="animationStatePolished"
+          >
+            polished
+          </figcaption>
+          <figcaption
+            (mouseover)="animationStone()"
+            (mouseout)="animationStone()"
+            [@animationText]="animationStateStone"
+          >
+            stone-setting
+          </figcaption>
+          <!-- ANIMACION -->
+          <div
+            class="lens enamelsAnimation"
+            [@animationEnamelsPhoto]="animationStateEnamels"
+            *ngIf="isVisibleEnamels"
+          ></div>
+          <div
+            class="lens designAnimation"
+            [@animationEnamelsPhoto]="animationStateDesign"
+            *ngIf="isVisibleDesign"
+          ></div>
+          <div
+            class="lens polishedAnimation"
+            [@animationEnamelsPhoto]="animationStatePolished"
+            *ngIf="isVisiblePolished"
+          ></div>
+          <div
+            class="lens stoneAnimation"
+            [@animationEnamelsPhoto]="animationStone"
+            *ngIf="isVisibleStone"
+          ></div>
+          <!------------------------------------------->
+        </figure>
+      </div>
+    </div>
+    <!-- row final -->
+  </div>
+</section>

@@ -1,0 +1,646 @@
+@import "../../../styles.scss";
+
+figure figcaption {
+  position: absolute;
+  font-size: 0.75rem;
+}
+figure figcaption:nth-child(2) {
+  top: 0px;
+  left: 0px;
+}
+
+figure figcaption:nth-child(3) {
+  top: 0px;
+  right: 0px;
+}
+
+figure figcaption:nth-child(4) {
+  bottom: 0px;
+  left: 0px;
+}
+
+figure figcaption:nth-child(5) {
+  bottom: 0px;
+  right: 0px;
+}
+
+.lens {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid $text;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.enamelsAnimation {
+    right: 27vw;
+    bottom: 60vh;
+    background-image: url(../../../assets/foto/ring_enamels.png);
+  }
+
+  &.designAnimation {
+    width: 286px;
+    height: 286px;
+    right: 21vw;
+    bottom: 33vh;
+    background-image: url(../../../assets/foto/ring_design.png);
+  }
+
+  &.polishedAnimation {
+    right: 38vw;
+    bottom: 25vh;
+    background-image: url(../../../assets/foto/ring_polished.png);
+  }
+
+  &.stoneAnimation {
+    right: 24vw;
+    bottom: 47vh;
+    background-image: url(../../../assets/foto/ring_stone.png);
+  }
+}
+
+.colHeight {
+  overflow: hidden;
+}
+
+// -------------------------------------min width 1200 ---------------------------------------
+@media (min-width: 991.98px) {
+  figure {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeMD;
+  }
+
+  .lens {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 1px solid $text;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.enamelsAnimation {
+      right: 98px;
+      top: 42px;
+    }
+
+    &.designAnimation {
+      width: 300px;
+      height: 300px;
+      right: 14px;
+      top: 6px;
+    }
+
+    &.polishedAnimation {
+      left: 92px;
+      bottom: 44px;
+    }
+
+    &.stoneAnimation {
+      right: 54px;
+      top: 130px;
+    }
+  }
+
+  .positionP {
+    position: absolute;
+    top: 80%;
+  }
+}
+
+// -------------------------------------min width 1640 ---------------------------------------
+@media (min-width: 1640px) {
+  figure {
+    position: relative;
+    width: 620px;
+    height: 620px;
+    img {
+      width: 620px;
+      height: 620px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeXXL;
+  }
+
+  .lens {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 1px solid $text;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.enamelsAnimation {
+      right: 154px;
+      top: 80px;
+    }
+
+    &.designAnimation {
+      width: 490px;
+      height: 490px;
+      right: 16px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 142px;
+      bottom: 76px;
+    }
+
+    &.stoneAnimation {
+      right: 86px;
+      top: 206px;
+    }
+  }
+}
+
+// -------------------------------------max width 992 ---------------------------------------
+@media (max-width: 991.98px) {
+  figure {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    img {
+      width: 260px;
+      height: 260px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeSM;
+  }
+
+  .interior-height {
+    height: 100%;
+  }
+
+  .interior-height-x {
+    height: 100%;
+  }
+
+  .container-height {
+    height: 100%;
+  }
+
+  .lens {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid $text;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.enamelsAnimation {
+      right: 64px;
+      top: 30px;
+    }
+
+    &.designAnimation {
+      width: 200px;
+      height: 200px;
+      right: 10px;
+      top: 6px;
+    }
+
+    &.polishedAnimation {
+      left: 60px;
+      bottom: 28px;
+    }
+
+    &.stoneAnimation {
+      right: 32px;
+      top: 84px;
+    }
+  }
+
+  .site-section {
+    height: auto;
+  }
+
+  .colHeight {
+    height: 180px;
+    position: relative;
+    margin: 30px 0;
+    h1 {
+      position: absolute;
+      top: 50%;
+    }
+    p.positionP {
+      position: absolute;
+      top: 50%;
+    }
+    div.link--arrowed {
+      position: absolute;
+      height: 36px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+  }
+
+  .link--arrowed {
+    margin-left: 1.2rem;
+    right: 14px;
+    z-index: 10;
+    .arrow-icon {
+      position: relative;
+      top: 0px;
+      -webkit-transition: -webkit-transform 0.3s ease;
+      transition: -webkit-transform 0.3s ease;
+      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+      vertical-align: middle;
+      animation: transformArrow 10s ease-in infinite;
+      animation-delay: 1s;
+    }
+    .arrow-icon--circle {
+      -webkit-transition: stroke-dashoffset 0.3s ease;
+      transition: stroke-dashoffset 0.3s ease;
+      stroke-dasharray: 95;
+      animation: stroke 10s ease-in infinite;
+      animation-delay: 1s;
+    }
+  }
+
+  .is-flipped-left {
+    transform: rotateY(180deg);
+    transition: transform 0.6s ease-in;
+  }
+
+  .is-flipped-right {
+    transform: rotateY(0deg);
+    transition: transform 0.6s ease-in;
+  }
+
+  @keyframes stroke {
+    0% {
+      stroke-dashoffset: 95;
+    }
+    6% {
+      stroke-dashoffset: 0;
+    }
+    12%,
+    100% {
+      stroke-dashoffset: 95;
+    }
+  }
+
+  @keyframes transformArrow {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    5% {
+      transform: translate3d(5px, 0, 0);
+    }
+    10%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+// -------------------------------------max width 991  MD---------------------------------------
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  figure {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeMD;
+  }
+
+  .lens {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 1px solid $text;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.enamelsAnimation {
+      right: 98px;
+      top: 42px;
+    }
+
+    &.designAnimation {
+      width: 300px;
+      height: 300px;
+      right: 14px;
+      top: 6px;
+    }
+
+    &.polishedAnimation {
+      left: 92px;
+      bottom: 44px;
+    }
+
+    &.stoneAnimation {
+      right: 54px;
+      top: 130px;
+    }
+  }
+
+  .colHeight {
+    max-height: 20vh;
+  }
+
+  .positionP {
+    position: absolute;
+    top: 80%;
+  }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .offset-lg-2 {
+    margin-left: 0%;
+  }
+
+  figure {
+    position: relative;
+    width: 560px;
+    height: 560px;
+    img {
+      width: 560px;
+      height: 560px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeXLiPadPortrait;
+  }
+
+  .lens {
+    width: 108px;
+    height: 108px;
+
+    &.enamelsAnimation {
+      right: 134px;
+      top: 64px;
+    }
+
+    &.designAnimation {
+      width: 440px;
+      height: 440px;
+      right: 8px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 120px;
+      bottom: 70px;
+    }
+
+    &.stoneAnimation {
+      right: 74px;
+      top: 180px;
+    }
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  figure {
+    position: relative;
+    width: 460px;
+    height: 460px;
+    img {
+      width: 460px;
+      height: 460px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeXL;
+  }
+
+  .lens {
+    width: 86px;
+    height: 86px;
+
+    &.enamelsAnimation {
+      right: 114px;
+      top: 54px;
+    }
+
+    &.designAnimation {
+      width: 340px;
+      height: 340px;
+      right: 12px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 100px;
+      bottom: 60px;
+    }
+
+    &.stoneAnimation {
+      right: 62px;
+      top: 146px;
+    }
+  }
+}
+
+/* ----------------------------------- iPad 1, 2, Mini and Air ------------------------------------------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023.98px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .padding-text {
+    padding-right: 100px;
+  }
+}
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  figure {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    img {
+      width: 360px;
+      height: 360px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeMD;
+  }
+
+  .lens {
+    width: 72px;
+    height: 72px;
+
+    &.enamelsAnimation {
+      right: 84px;
+      top: 34px;
+    }
+
+    &.designAnimation {
+      width: 280px;
+      height: 280px;
+      right: 8px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 80px;
+      bottom: 40px;
+    }
+
+    &.stoneAnimation {
+      right: 44px;
+      top: 116px;
+    }
+  }
+
+  .padding-text {
+    padding-right: 60px;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  figure {
+    position: relative;
+    margin: 20px;
+    margin-bottom: 72px;
+    width: 380px;
+    height: 260px;
+    img {
+      margin-left: 60px;
+      margin-right: 60px;
+      width: 260px;
+      height: 260px;
+    }
+  }
+  figure figcaption {
+    position: absolute;
+    font-size: $textSizeMD;
+  }
+
+  .lens {
+    width: 66px;
+    height: 66px;
+
+    &.enamelsAnimation {
+      right: 118px;
+      top: 24px;
+    }
+
+    &.designAnimation {
+      width: 210px;
+      height: 210px;
+      right: 64px;
+      top: 0px;
+    }
+
+    &.polishedAnimation {
+      left: 112px;
+      bottom: 24px;
+    }
+
+    &.stoneAnimation {
+      right: 84px;
+      top: 72px;
+    }
+  }
+
+  .interior-height {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .colHeight {
+    margin-top: $mBottomS-XS;
+    max-height: 200px;
+    margin-bottom: 26px;
+  }
+
+  .positionP {
+    position: absolute;
+    top: 78%;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .interior-height {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .colHeight {
+    margin-top: $mBottomS-XS;
+    max-height: 200px;
+    margin-bottom: 26px;
+  }
+
+  .positionP {
+    position: absolute;
+    top: 78%;
+  }
+
+  figure {
+    margin-bottom: 64px;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .interior-height {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .colHeight {
+    margin-top: $mBottomS-XS;
+    max-height: 200px;
+    margin-bottom: 26px;
+  }
+
+  .positionP {
+    position: absolute;
+    top: 78%;
+  }
+
+  figure {
+    margin: 20px;
+    margin-bottom: 82px;
+  }
+}
