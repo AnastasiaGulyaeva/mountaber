@@ -43,15 +43,17 @@ export class ContactComponent implements OnInit {
 
   submit() {
     console.log(this.form.value);
-    this.messageService.sendMessage(this.form.value).subscribe(() => {
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "The message has been sent successfully",
-        showConfirmButton: false,
-        timer: 1500,
+    if (this.form.valid) {
+      this.messageService.sendMessage(this.form.value).subscribe(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "The message has been sent successfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
-    });
+    }
   }
 
   inputChange(i: number) {

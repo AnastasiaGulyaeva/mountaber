@@ -20,6 +20,7 @@ import { MessageService } from "./services/message.service";
 import { CookiesComponent } from './views/cookies/cookies.component';
 import { CreditsComponent } from './views/credits/credits.component';
 import { LegalAdvertisementComponent } from './views/legal-advertisement/legal-advertisement.component';
+import { CookiesModuleComponent } from './shared/cookies-module/cookies-module.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LegalAdvertisementComponent } from './views/legal-advertisement/legal-a
     CookiesComponent,
     CreditsComponent,
     LegalAdvertisementComponent,
+    CookiesModuleComponent,
   ],
   imports: [
     BrowserModule,

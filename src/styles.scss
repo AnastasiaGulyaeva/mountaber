@@ -295,7 +295,7 @@ h1 {
   line-height: 160%;
 }
 
-// -------------------------- sweet alert
+// -------------------------------------------- sweet alert ---------------------------------------------------
 
 .swal2-popup {
   border: solid 1px $text !important;
@@ -311,11 +311,29 @@ h1 {
   font-weight: 100 !important;
 }
 
-.swal2-icon.swal2-success .swal2-success-ring {
-  border: 0.25em solid lighten($green, 54%) !important;
+.swal2-icon {
+  &.swal2-success .swal2-success-ring {
+    border: 0.25em solid lighten($green, 54%) !important;
+  }
+  &.swal2-success [class^="swal2-success-line"] {
+    background-color: lighten($green, 24%) !important;
+  }
 }
-.swal2-icon.swal2-success [class^="swal2-success-line"] {
-  background-color: lighten($green, 24%) !important;
+
+.content-class {
+  padding: 0 4em !important;
+}
+
+.confirm-button-class {
+  border-radius: 0em !important;
+  padding: 0.25em 1.6em !important;
+}
+
+.swal2-styled:focus {
+  box-shadow: 0 0 0 0px #fff, 0 0 0 0px rgba(50, 100, 150, 0.4) !important;
+}
+.swal2-actions {
+  margin: 1em auto 0 !important;
 }
 
 // MEDIA QUERIES -------------------------------------------------------- max-width: 576 SM
@@ -332,7 +350,7 @@ h1 {
     color: $text;
   }
 
-  p, 
+  p,
   ul,
   li {
     font-size: $textSizeSM;
@@ -368,36 +386,6 @@ h1 {
     width: 82%;
     max-width: 82%;
   }
-
-  // p {
-  //   @include commonText;
-  //   font-size: $textSizeXXL;
-  // }
-
-  // a {
-  //   @include commonText(13px);
-  //   font-size: $textSizeXXL;
-  // }
-
-  // h1 {
-  //   @include commonTitle(98%);
-  //   font-size: $titleSizeXXL;
-  //   margin-bottom: $mBottomS-XL;
-  // }
-
-  // h2 {
-  //   @include commonTitle(96%);
-  //   font-size: $h2SizeXXL;
-  //   color: $text;
-  // }
-
-  // .button {
-  //   margin-top: $mBottomS-XL;
-  // }
-
-  // .padding-text {
-  //   padding-right: 120px;
-  // }
 }
 
 // MEDIA QUERIES -------------------------------------------------------- min-width: 1860
