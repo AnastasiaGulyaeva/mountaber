@@ -24,7 +24,7 @@ $standard-transition: all 0.76s cubic-bezier(0.2, 1, 0.3, 1);
 figure h2 {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 42%;
 }
 
 .collections-text {
@@ -188,6 +188,192 @@ figure h2 {
 
 .d-none-ipad {
   display: none !important;
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .img-jewels {
+    width: 120px;
+    height: 120px;
+  }
+
+  .img-jewels .emphasis-left-img {
+    transform-origin: top left;
+  }
+  .img-jewels .emphasis-right-img {
+    transform-origin: bottom right;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+  figure h2 {
+    left: 37%;
+  }
+
+  .img-jewels #rosemary-h2 {
+    left: 35%;
+  }
+
+  .img-jewels .left-h2-emphasis {
+    transform: scale(1.3);
+    top: 107% !important;
+    left: 12% !important;
+  }
+
+  .img-jewels .right-h2-emphasis {
+    transform: scale(1.3);
+    top: 85% !important;
+    left: 60% !important;
+  }
+
+  .laTecnicaMove {
+    transform: translateX(0%);
+  }
+
+  .container-portrait {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 22vh 10vh 22vh 25vh;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: stretch;
+    align-items: stretch;
+    height: 79vh;
+    grid-template-areas:
+      "chamfer"
+      "line"
+      "rosemary"
+      "text";
+  }
+
+  .gridChamfer {
+    grid-area: chamfer;
+    align-self: end;
+  }
+  .gridLine {
+    grid-area: line;
+  }
+  .gridRosemary {
+    grid-area: rosemary;
+    align-self: start;
+  }
+
+  .gridText {
+    grid-area: text;
+    height: 25vh;
+    position: relative;
+
+    div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto auto;
+    }
+
+    div.collections-text {
+      text-align: center;
+      height: 102px;
+    }
+
+    div.collections-text-tecnica {
+      width: 244px;
+      height: 133px;
+    }
+  }
+
+  .vertical-line {
+    border-bottom: 1px solid #485368;
+    border-left: none;
+    width: 60px;
+    height: 1px;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+//  ---------------------------------------------------------------
+@media (max-width: 991px) {
+  .img-jewels {
+    width: 180px;
+    height: 180px;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  figure h2 {
+    left: 37%;
+  }
+
+  .img-jewels #rosemary-h2 {
+    left: 35.5%;
+  }
+
+  .collections-text-tecnica {
+    width: 350px;
+  }
+
+  .img-jewels .left-h2-emphasis {
+    transform: scale(1.3);
+  }
+
+  .img-jewels .right-h2-emphasis {
+    transform: scale(1.3);
+  }
+}
+
+// -----------------------------------------------------------------
+@media (max-width: 772px) {
+  .img-jewels {
+    width: 160px;
+    height: 160px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  figure h2 {
+    left: 36%;
+  }
+
+  .img-jewels #rosemary-h2 {
+    left: 33%;
+  }
+
+  .collections-text-tecnica {
+    width: 350px;
+  }
+
+  .img-jewels {
+    .left-h2-emphasis {
+      transform: scale(1.3);
+      top: 120% !important;
+      left: 14% !important;
+    }
+    .right-h2-emphasis {
+      transform: scale(1.3);
+      top: 120% !important;
+      left: 46% !important;
+    }
+  }
+
+  .laTecnicaMove {
+    transform: translateX(0%);
+  }
+  .collections-text-tecnica {
+    left: calc(50% - 350px / 2);
+  }
 }
 
 /* ----------- iPad Pro 12.9" ----------- */

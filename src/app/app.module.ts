@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { CookieService } from "ngx-cookie-service";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -17,10 +18,10 @@ import { IconsComponent } from "./shared/icons/icons.component";
 import { HamburgerComponent } from "./shared/hamburger/hamburger.component";
 import { HttpClientModule } from "@angular/common/http";
 import { MessageService } from "./services/message.service";
-import { CookiesComponent } from './views/cookies/cookies.component';
-import { CreditsComponent } from './views/credits/credits.component';
-import { LegalAdvertisementComponent } from './views/legal-advertisement/legal-advertisement.component';
-import { CookiesModuleComponent } from './shared/cookies-module/cookies-module.component';
+import { CookiesComponent } from "./views/cookies/cookies.component";
+import { CreditsComponent } from "./views/credits/credits.component";
+import { LegalAdvertisementComponent } from "./views/legal-advertisement/legal-advertisement.component";
+import { CookiePopupComponent } from "./components/cookie-popup/cookie-popup.component";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { CookiesModuleComponent } from './shared/cookies-module/cookies-module.c
     CookiesComponent,
     CreditsComponent,
     LegalAdvertisementComponent,
-    CookiesModuleComponent,
+    CookiePopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +49,7 @@ import { CookiesModuleComponent } from './shared/cookies-module/cookies-module.c
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [MessageService],
+  providers: [MessageService, CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

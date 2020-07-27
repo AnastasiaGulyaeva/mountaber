@@ -151,7 +151,7 @@ header {
 
 section {
   @include media(sm) {
-    height: 79vh;
+    height: auto;
   }
   @include media(md) {
     height: 79vh;

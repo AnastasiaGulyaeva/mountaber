@@ -167,10 +167,14 @@ figure figcaption:nth-child(5) {
 
 // -------------------------------------max width 992 ---------------------------------------
 @media (max-width: 991.98px) {
+  .padding-bottom-mobile {
+    padding-bottom: 60px;
+  }
   figure {
     position: relative;
     width: 260px;
     height: 260px;
+    margin-bottom: 60px;
     img {
       width: 260px;
       height: 260px;
@@ -182,15 +186,15 @@ figure figcaption:nth-child(5) {
   }
 
   .interior-height {
-    height: 100%;
+    height: auto;
   }
 
   .interior-height-x {
-    height: 100%;
+    height: auto;
   }
 
   .container-height {
-    height: 100%;
+    height: auto;
   }
 
   .lens {
@@ -230,7 +234,7 @@ figure figcaption:nth-child(5) {
   }
 
   .colHeight {
-    height: 180px;
+    height: 211px;
     position: relative;
     margin: 30px 0;
     h1 {
