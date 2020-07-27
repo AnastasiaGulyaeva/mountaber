@@ -47,14 +47,6 @@
 
 // --------------------------------------min width 1200 ------------------------------------------
 @media (min-width: 1200px) {
-
-  footer {
-    background: rgba($color: #f6f5f3, $alpha: 0.96);
-  }
-  .transparentFooter {
-    background: none;
-  }
-
   .footer-left p,
   .footer-right p {
     line-height: 10vh;
@@ -72,6 +64,16 @@
   .footer-left p,
   .footer-right p {
     line-height: 5vh;
+  }
+}
+
+@media (min-width: 991.98px) {
+  footer {
+    background: rgba($color: #f6f5f3, $alpha: 0.96);
+  }
+
+  .transparentFooter {
+    background: none;
   }
 }
 

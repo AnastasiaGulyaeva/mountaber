@@ -218,6 +218,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   ul li:last-child {
     margin-top: -20px;
   }
+
+  li {
+    color: $background;
+    & a.credits {
+      font-size: 1rem !important;
+    }
+  }
 }
 
 // -------------------------------media queries ---------------------------------------------------

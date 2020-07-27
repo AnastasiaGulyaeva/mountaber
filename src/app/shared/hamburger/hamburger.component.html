@@ -27,6 +27,24 @@
           </li>
           <hr [@menuAnimationLine]="menuState" />
           <li [@menuAnimationIcons]="menuState">
+            <a
+              (click)="close()"
+              routerLink="/legal-advertisement"
+              title="legal adevertisement mountaber.com"
+              class="credits"
+              >legal advertisement &nbsp;</a
+            >
+            |
+            <a
+              (click)="close()"
+              routerLink="/credits"
+              title="credits mountaber.com"
+              class="credits"
+            >
+              &nbsp; credits</a
+            >
+          </li>
+          <li [@menuAnimationIcons]="menuState">
             <a>
               <i class="fa fa-linkedin"></i>
             </a>
